@@ -1,7 +1,7 @@
 package mx.edu.utez.sistemaContratos.usuario.model;
 
-import com.example.integradora_contratos.contrato.model.Contrato;
-import com.example.integradora_contratos.role.model.Role;
+import mx.edu.utez.sistemaContratos.contrato.model.Contrato;
+import mx.edu.utez.sistemaContratos.role.model.Role;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 

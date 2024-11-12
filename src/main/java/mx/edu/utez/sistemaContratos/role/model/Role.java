@@ -1,6 +1,6 @@
 package mx.edu.utez.sistemaContratos.role.model;
 
-import com.example.integradora_contratos.usuario.model.Usuario;
+import mx.edu.utez.sistemaContratos.usuario.model.Usuario;
 import jakarta.persistence.*;
 
 import java.util.HashSet;

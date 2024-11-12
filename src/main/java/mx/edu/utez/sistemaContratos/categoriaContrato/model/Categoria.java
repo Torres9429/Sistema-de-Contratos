@@ -1,6 +1,6 @@
 package mx.edu.utez.sistemaContratos.categoriaContrato.model;
 
-import com.example.integradora_contratos.contrato.model.Contrato;
+import mx.edu.utez.sistemaContratos.contrato.model.Contrato;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
