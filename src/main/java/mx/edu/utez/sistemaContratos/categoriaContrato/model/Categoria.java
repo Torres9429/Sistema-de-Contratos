@@ -19,6 +19,10 @@ public class Categoria {
     @Column(name = "status", columnDefinition = "BOOL DEFAULT TRUE")
     private boolean status;
 
+    @OneToMany(mappedBy = "categorias")
+    @JsonIgnore
+    private List<Contrato> contratos;
+
     public Categoria() {
     }
 
@@ -27,6 +31,12 @@ public class Categoria {
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.status = status;
+    }
+
+    public Categoria(String nombre, String descripcion) {
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.status = true;
     }
 
     public Long getId() {
