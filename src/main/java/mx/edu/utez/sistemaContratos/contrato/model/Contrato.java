@@ -26,19 +26,20 @@ public class Contrato {
 
     @ManyToOne
     @JoinColumn(name = "cliente_id", nullable = false)
-    @JsonIgnore // Evita la serialización infinita
     private Cliente cliente;
 
     @ManyToOne
     @JoinColumn(name = "categoriaContrato_id", nullable = false)
-    @JsonIgnore // Evita la serialización infinita
     private Categoria categorias;
 
     @ManyToMany(mappedBy = "contratos")
     @JsonIgnore
     private List<Usuario> usuarios;
 
-    public Contrato() {
+    public Contrato(String nombre, String descripcion, Date fechaVencimiento, Long clienteId, Long categoriaContratoId) {
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.fechaVencimiento = fechaVencimiento;
     }
 
     public Contrato(Long id, String nombre, String descripcion, Date fechaVencimiento, boolean status) {
@@ -54,6 +55,10 @@ public class Contrato {
         this.descripcion = descripcion;
         this.fechaVencimiento = fechaVencimiento;
         this.status = status;
+    }
+
+    public Contrato() {
+
     }
 
     public Long getId() {
