@@ -19,6 +19,10 @@ public class CategoriaController {
     public ResponseEntity<Message> findAll(){
         return categoriaService.findAll();
     }
+    @GetMapping("/categorias/{id}")
+    public ResponseEntity<Message> findById(@PathVariable Long id) {
+        return categoriaService.findById(id);
+    }
     @GetMapping("/activas")
     public ResponseEntity<Message> findActives(){
         return categoriaService.findActives();
