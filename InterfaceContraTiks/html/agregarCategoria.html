@@ -1,0 +1,230 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Agregar categoría</title>
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css' rel='stylesheet'>
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css' rel='stylesheet'>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <link rel="stylesheet" href="../css/menu.css">
+
+</head>
+
+<body className='snippet-body'>
+
+    <body id="body-pd">
+        <header class="header" id="header">
+            <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
+        </header>
+        <div class="l-navbar" id="nav-bar">
+            <nav class="nav">
+                <div> <a href="#" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span
+                            class="nav_logo-name">ContraTiks</span> </a>
+                    <div class="nav_list">
+                        <!-- Dropdown para Contratos -->
+                        <div class="nav-item dropdown">
+                            <a class="nav_link dropdown-toggle" href="#" id="dropdownContratos" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class='bx bx-folder nav_icon'></i><span class="nav_name">Contratos</span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownContratos">
+                                <li><a class="dropdown-item" href="#">Agregar</a></li>
+                                <li><a class="dropdown-item" href="#">Consultar</a></li>
+                                <li><a class="dropdown-item" href="#">Actualizar</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Dropdown para Usuarios -->
+                        <div class="nav-item dropdown">
+                            <a class="nav_link dropdown-toggle" href="#" id="dropdownUsuarios" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class='bx bx-user nav_icon'></i><span class="nav_name">Usuarios</span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownPerfil">
+                                <li><a class="dropdown-item" href="#">Agregar</a></li>
+                                <li><a class="dropdown-item" href="#">Consultar</a></li>
+                                <li><a class="dropdown-item" href="#">Actualizar</a></li>
+                            </ul>
+                        </div>
+                        <!-- Dropdown para Categorias -->
+                        <div class="nav-item dropdown">
+                            <a class="nav_link dropdown-toggle" href="#" id="dropdownCategorias" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">Categorias</span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownCategorias">
+                                <li><a class="dropdown-item" href="#">Agregar</a></li>
+                                <li><a class="dropdown-item" href="#">Consultar</a></li>
+                                <li><a class="dropdown-item" href="#">Actualizar</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Dropdown para Clientes -->
+                        <div class="nav-item dropdown">
+                            <a class="nav_link dropdown-toggle" href="#" id="dropdownClientes" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class='bx bx-bar-chart-alt-2 nav_icon'></i> <span class="nav_name">Clientes</span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownClientes">
+                                <li><a class="dropdown-item" href="#">Agregar</a></li>
+                                <li><a class="dropdown-item" href="#">Consultar</a></li>
+                                <li><a class="dropdown-item" href="#">Actualizar</a></li>
+                            </ul>
+                        </div>
+                        <!-- Perfil y Cerrar sesión -->
+                        <div class="nav-item dropdown nav-profile">
+                            <a class="nav_link dropdown-toggle" href="#" id="dropdownUser1" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class='bx bx-wink-smile nav_icon'></i> <span class="nav_name">Perfil</span>
+                            </a>
+                            <ul class="dropdown-menu aria-labelledby=" dropdownUser1">
+                                <li><a class="dropdown-item" href="#">Perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Cambiar contraseña</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                            </ul>
+                        </div>
+            </nav>
+        </div>
+        <!--Container Main start-->
+        <div class="bg-light">
+            <!-- Contenido principal -->
+            <div class="container mt-5">
+                <h1 class="text-center">Agregar categoría</h1>
+                <!-- Aquí va el formulario u otra funcionalidad -->
+                <form id="categoriaForm">
+                    <div class="mb-3">
+                        <label for="nombreCategoria" class="form-label">Nombre de la categoría</label>
+                        <input type="text" class="form-control" id="nombreCategoria"
+                            placeholder="Escribe el nombre de la categoría">
+                    </div>
+                    <div class="mb-3">
+                        <label for="descripcionCategoria" class="form-label">Descripción</label>
+                        <textarea class="form-control" id="descripcionCategoria" rows="3"
+                            placeholder="Escribe una descripción" maxlength="70"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Agregar categoría</button>
+                </form>
+            </div>
+        </div>
+        <!-- Mensaje de éxito o error -->
+        <div id="alerta" class="alert mt-3" role="alert" style="display: none;"></div>
+        <!--Container Main end-->
+        <script type='text/javascript'
+            src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js'></script>
+        <script type='text/javascript'>
+
+            document.addEventListener("DOMContentLoaded", function (event) {
+
+                const showNavbar = (toggleId, navId, bodyId, headerId) => {
+                    const toggle = document.getElementById(toggleId),
+                        nav = document.getElementById(navId),
+                        bodypd = document.getElementById(bodyId),
+                        headerpd = document.getElementById(headerId)
+
+                    // Validate that all variables exist
+                    if (toggle && nav && bodypd && headerpd) {
+                        toggle.addEventListener('click', () => {
+                            // show navbar
+                            nav.classList.toggle('show')
+                            // change icon
+                            toggle.classList.toggle('bx-x')
+                            // add padding to body
+                            bodypd.classList.toggle('body-pd')
+                            // add padding to header
+                            headerpd.classList.toggle('body-pd')
+                        })
+                    }
+                }
+
+                showNavbar('header-toggle', 'nav-bar', 'body-pd', 'header')
+
+                /*===== LINK ACTIVE =====*/
+                const linkColor = document.querySelectorAll('.nav_link')
+
+                function colorLink() {
+                    if (linkColor) {
+                        linkColor.forEach(l => l.classList.remove('active'))
+                        this.classList.add('active')
+                    }
+                }
+                linkColor.forEach(l => l.addEventListener('click', colorLink))
+
+                // Your code to run since DOM is loaded and ready
+            });
+
+
+            // Lógica para enviar datos, mostrar y ocultar la alerta
+            document.getElementById("categoriaForm").addEventListener("submit", function (e) {
+                e.preventDefault(); // Evita el envío tradicional del formulario
+
+                const nombre = document.getElementById("nombreCategoria").value;
+                const descripcion = document.getElementById("descripcionCategoria").value;
+
+                const data = {
+                    nombre: nombre,
+                    descripcion: descripcion
+                };
+
+                fetch('http://localhost:8080/categoria/save', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data),
+                })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Error en la solicitud: ' + response.statusText);
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        const alerta = document.getElementById("alerta");
+
+                        if (data.type === "SUCCESS") {
+                            alerta.textContent = "Categoría agregada exitosamente.";
+                            alerta.className = "alert alert-success";
+                        } else {
+                            alerta.textContent = "Error al agregar la categoría: " + (data.message || "Error desconocido.");
+                            alerta.className = "alert alert-danger";
+                        }
+
+                        // Muestra la alerta
+                        alerta.style.display = "block";
+
+                        // Oculta la alerta después de 5 segundos
+                        setTimeout(() => {
+                            alerta.style.display = "none";
+                        }, 5000);
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        const alerta = document.getElementById("alerta");
+                        alerta.textContent = "Hubo un error al procesar tu solicitud.";
+                        alerta.className = "alert alert-danger";
+                        alerta.style.display = "block";
+
+                        // Oculta la alerta después de 5 segundos
+                        setTimeout(() => {
+                            alerta.style.display = "none";
+                        }, 5000);
+                    });
+            });
+
+
+
+        </script>
+
+        <script type='text/javascript'>var myLink = document.querySelector('a[href="#"]');
+            myLink.addEventListener('click', function (e) {
+                e.preventDefault();
+            });</script>
+
+    </body>
+
+</html>
