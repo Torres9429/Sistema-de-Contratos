@@ -16,6 +16,10 @@ public class Message {
         this.result = result;
     }
 
+    public Message(String inicioDeSesiónExitoso, TypesResponse typesResponse, String token) {
+
+    }
+
     public String getText() {
         return text;
     }
