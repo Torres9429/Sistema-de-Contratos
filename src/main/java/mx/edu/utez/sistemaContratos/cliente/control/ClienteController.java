@@ -43,8 +43,8 @@ public class ClienteController {
         return clienteService.changeStatus(clienteDto);
     }
 
-    @GetMapping("/status")
-    public ResponseEntity<Message> findByStatus(@PathVariable boolean status) {
+    @GetMapping("/actives")
+    public ResponseEntity<Message> findActives() {
         return clienteService.findActives();
     }
 }
