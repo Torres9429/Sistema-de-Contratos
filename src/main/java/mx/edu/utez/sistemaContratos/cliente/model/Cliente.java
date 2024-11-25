@@ -11,7 +11,7 @@ public class Cliente {
     private String nombre;
     @Column(name = "apellidos", columnDefinition = "VARCHAR(30)")
     private String apellidos;
-    @Column(name = "correo", columnDefinition = "VARCHAR(20)")
+    @Column(name = "correo", columnDefinition = "VARCHAR(50)")
     private String correo;
     @Column(name = "telefono", columnDefinition = "VARCHAR(10)")
     private String telefono;
