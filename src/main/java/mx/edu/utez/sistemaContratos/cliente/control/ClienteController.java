@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/clientes")
+@CrossOrigin(origins = {"*"},methods = {RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT,RequestMethod.DELETE})
 public class ClienteController {
 
     private final ClienteService clienteService;
@@ -17,7 +18,7 @@ public class ClienteController {
         this.clienteService = clienteService;
     }
 
-    @GetMapping
+    @GetMapping("/all")
     public ResponseEntity<Message> findAll() {
         return clienteService.findAll();
     }
@@ -37,7 +38,7 @@ public class ClienteController {
         return clienteService.update(clienteDto);
     }
 
-    @PatchMapping("/changeStatus")
+    @PutMapping("/changeStatus")
     public ResponseEntity<Message> changeStatus(@RequestBody ClienteDto clienteDto) {
         return clienteService.changeStatus(clienteDto);
     }
