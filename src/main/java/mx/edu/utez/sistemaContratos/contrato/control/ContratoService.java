@@ -1,6 +1,8 @@
 package mx.edu.utez.sistemaContratos.contrato.control;
 
+import mx.edu.utez.sistemaContratos.categoriaContrato.model.Categoria;
 import mx.edu.utez.sistemaContratos.categoriaContrato.model.CategoriaRepository;
+import mx.edu.utez.sistemaContratos.cliente.model.Cliente;
 import mx.edu.utez.sistemaContratos.cliente.model.ClienteRepository;
 import mx.edu.utez.sistemaContratos.contrato.model.Contrato;
 import mx.edu.utez.sistemaContratos.contrato.model.ContratoDto;
@@ -59,7 +61,25 @@ public class ContratoService {
         if (dto.getDescripcion().length() > 70) {
             return new ResponseEntity<>(new Message("La descripción excede el número de caracteres", TypesResponse.WARNING), HttpStatus.BAD_REQUEST);
         }
-        Contrato contrato = new Contrato(dto.getNombre(), dto.getDescripcion(),dto.getFechaVencimiento(),dto.getClienteId(),dto.getCategoriaContrato_id());
+        if (dto.getClienteId() == null) {
+            return new ResponseEntity<>(new Message("El ID de cliente no puede ser nulo", TypesResponse.WARNING), HttpStatus.BAD_REQUEST);
+        }
+        if (dto.getCategoriaContrato_id() == null) {
+            return new ResponseEntity<>(new Message("El ID de categoría no puede ser nulo", TypesResponse.WARNING), HttpStatus.BAD_REQUEST);
+        }
+
+        Cliente cliente = clienteRepository.findById(dto.getClienteId()).orElse(null);
+        if (cliente == null) {
+            return new ResponseEntity<>(new Message("Cliente no encontrado", TypesResponse.WARNING), HttpStatus.BAD_REQUEST);
+        }
+        Categoria categoria = categoriaRepository.findById(dto.getCategoriaContrato_id()).orElse(null);
+        if (categoria == null) {
+            return new ResponseEntity<>(new Message("Categoría de contrato no encontrada", TypesResponse.WARNING), HttpStatus.BAD_REQUEST);
+        }
+
+        Contrato contrato = new Contrato(dto.getNombre(), dto.getDescripcion(),dto.getFechaVencimiento());
+        contrato.setCategorias(categoria);
+        contrato.setCliente(cliente);
         contrato = contratoRepository.saveAndFlush(contrato);
         if(contrato == null){
             return new ResponseEntity<>(new Message("El contrato no se registró",TypesResponse.ERROR),HttpStatus.BAD_REQUEST);
@@ -110,8 +130,8 @@ public class ContratoService {
 
     @Transactional(readOnly = true)
     public ResponseEntity<Message> findActives(){
-        List<Contrato> respuestas = categoriaRepository.findAllByStatusIsTrue();
-        logger.info("Lista de categorias activas");
-        return new ResponseEntity<>(new Message(respuestas,"Categorias con status activo",TypesResponse.SUCCESS),HttpStatus.OK);
+        List<Contrato> respuestas = contratoRepository.findAllByStatusIsTrue();
+        logger.info("Lista de contratos activos");
+        return new ResponseEntity<>(new Message(respuestas,"Contratos con status activo",TypesResponse.SUCCESS),HttpStatus.OK);
     }
 }

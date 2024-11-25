@@ -36,10 +36,12 @@ public class Contrato {
     @JsonIgnore
     private List<Usuario> usuarios;
 
-    public Contrato(String nombre, String descripcion, Date fechaVencimiento, Long clienteId, Long categoriaContratoId) {
+    public Contrato(String nombre, String descripcion, Date fechaVencimiento) {
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.fechaVencimiento = fechaVencimiento;
+        this.status = true;
+
     }
 
     public Contrato(Long id, String nombre, String descripcion, Date fechaVencimiento, boolean status) {
@@ -58,7 +60,6 @@ public class Contrato {
     }
 
     public Contrato() {
-
     }
 
     public Long getId() {
@@ -100,5 +101,20 @@ public class Contrato {
     public void setStatus(boolean status) {
         this.status = status;
     }
-}
 
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public Categoria getCategorias() {
+        return categorias;
+    }
+
+    public void setCategorias(Categoria categorias) {
+        this.categorias = categorias;
+    }
+}

@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface ContratoRepository extends JpaRepository<Contrato, Long> {
     List<Contrato> findByStatus(boolean status);
+
+    List<Contrato> findAllByStatusIsTrue();
 }
