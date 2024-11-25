@@ -30,7 +30,7 @@ public class Usuario {
 
     @Email(message = "Debe ser un correo válido")
     @NotBlank(message = "El correo es obligatorio")
-    @Column(name = "correo", columnDefinition = "VARCHAR(20)", unique = true)
+    @Column(name = "correo", columnDefinition = "VARCHAR(100)", unique = true)
     private String correo;
 
     @NotBlank(message = "El teléfono es obligatorio")
@@ -44,14 +44,12 @@ public class Usuario {
     private String contrasena;
 
     @Column(name = "status", columnDefinition = "BOOL DEFAULT TRUE")
-    private boolean status = true; // Por defecto habilitado
+    private boolean status = true;
 
-    // Relación con Contrato (muchos a muchos)
     @ManyToMany
     @JsonIgnore
     private List<Contrato> contratos;
 
-    // Relación con Role (muchos a muchos)
     @ManyToMany
     @JoinTable(
             name = "usuario_role",
@@ -60,24 +58,25 @@ public class Usuario {
     )
     private Set<Role> roles = new HashSet<>();
 
-    // Atributo para el token de recuperación de contraseña
     @Column(name = "token_recuperacion", columnDefinition = "VARCHAR(255)")
     private String tokenRecuperacion;
 
-    // Constructores
-    public Usuario() {}
+    // Constructores, Getters y Setters omitidos para brevedad
 
-    public Usuario(String nombre, String apellidos, String correo, String telefono, String contrasena, boolean status, String tokenRecuperacion) {
+    public Usuario(Long id, String nombre, String apellidos, String correo, String telefono, String contrasena, boolean status, List<Contrato> contratos, Set<Role> roles, String tokenRecuperacion) {
+        this.id = id;
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.correo = correo;
         this.telefono = telefono;
         this.contrasena = contrasena;
         this.status = status;
+        this.contratos = contratos;
+        this.roles = roles;
         this.tokenRecuperacion = tokenRecuperacion;
     }
+    public Usuario() {  }
 
-    // Getters y Setters
     public Long getId() {
         return id;
     }
@@ -134,20 +133,20 @@ public class Usuario {
         this.status = status;
     }
 
-    public Set<Role> getRoles() {
-        return roles;
-    }
-
-    public void setRoles(Set<Role> roles) {
-        this.roles = roles;
-    }
-
     public List<Contrato> getContratos() {
         return contratos;
     }
 
     public void setContratos(List<Contrato> contratos) {
         this.contratos = contratos;
+    }
+
+    public Set<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
     }
 
     public String getTokenRecuperacion() {

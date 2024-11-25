@@ -24,18 +24,22 @@ public class UsuarioController {
 
     @PostMapping("/registrar")
     public ResponseEntity<Message> registrarUsuario(@RequestBody Usuario usuario) {
+        System.out.println("Iniciando registro de usuario: " + usuario);
+
         try {
             Message nuevoUsuario = usuarioService.registrarUsuario(usuario);
+            System.out.println("Usuario registrado: " + nuevoUsuario);
             return ResponseEntity.status(HttpStatus.CREATED).body(nuevoUsuario);
         } catch (IllegalArgumentException e) {
+            System.err.println("Error de datos: " + e.getMessage());
             return ResponseEntity.status(HttpStatus.BAD_REQUEST)
                     .body(new Message(e.getMessage(), TypesResponse.ERROR));
         } catch (Exception e) {
+            e.printStackTrace();
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body(new Message("Error en el servidor", TypesResponse.ERROR));
         }
     }
-
     @GetMapping
     public ResponseEntity<Message> consultarUsuarios() {
         List<Usuario> usuarios = usuarioService.consultarUsuarios();
