@@ -1,9 +1,12 @@
 package mx.edu.utez.sistemaContratos.usuario.model;
 
-import mx.edu.utez.sistemaContratos.contrato.model.Contrato;
-import mx.edu.utez.sistemaContratos.role.model.Role;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+import mx.edu.utez.sistemaContratos.contrato.model.Contrato;
+import mx.edu.utez.sistemaContratos.role.model.Role;
 
 import java.util.HashSet;
 import java.util.List;
@@ -17,23 +20,32 @@ public class Usuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank(message = "El nombre es obligatorio")
     @Column(name = "nombre", columnDefinition = "VARCHAR(70)")
     private String nombre;
 
+    @NotBlank(message = "Los apellidos son obligatorios")
     @Column(name = "apellidos", columnDefinition = "VARCHAR(70)")
     private String apellidos;
 
-    @Column(name = "correo", columnDefinition = "VARCHAR(20)")
+    @Email(message = "Debe ser un correo válido")
+    @NotBlank(message = "El correo es obligatorio")
+    @Column(name = "correo", columnDefinition = "VARCHAR(100)", unique = true)
     private String correo;
 
-    @Column(name = "telefono", columnDefinition = "VARCHAR(10)")
+    @NotBlank(message = "El teléfono es obligatorio")
+    @Size(min = 10, max = 15, message = "El teléfono debe tener entre 10 y 15 dígitos")
+    @Column(name = "telefono", columnDefinition = "VARCHAR(15)")
     private String telefono;
 
+    @NotBlank(message = "La contraseña es obligatoria")
+    @Size(min = 8, message = "La contraseña debe tener al menos 8 caracteres")
     @Column(name = "contrasena", columnDefinition = "VARCHAR(70)")
     private String contrasena;
 
     @Column(name = "status", columnDefinition = "BOOL DEFAULT TRUE")
-    private boolean status;
+    private boolean status = true;
+
     @ManyToMany
     @JsonIgnore
     private List<Contrato> contratos;
@@ -46,18 +58,25 @@ public class Usuario {
     )
     private Set<Role> roles = new HashSet<>();
 
-    public Usuario() {}
+    @Column(name = "token_recuperacion", columnDefinition = "VARCHAR(255)")
+    private String tokenRecuperacion;
 
-    public Usuario(String nombre, String apellidos, String correo, String telefono, String contrasena, boolean status) {
+    // Constructores, Getters y Setters omitidos para brevedad
+
+    public Usuario(Long id, String nombre, String apellidos, String correo, String telefono, String contrasena, boolean status, List<Contrato> contratos, Set<Role> roles, String tokenRecuperacion) {
+        this.id = id;
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.correo = correo;
         this.telefono = telefono;
         this.contrasena = contrasena;
         this.status = status;
+        this.contratos = contratos;
+        this.roles = roles;
+        this.tokenRecuperacion = tokenRecuperacion;
     }
+    public Usuario() {  }
 
-    // Getters y Setters
     public Long getId() {
         return id;
     }
@@ -114,11 +133,27 @@ public class Usuario {
         this.status = status;
     }
 
+    public List<Contrato> getContratos() {
+        return contratos;
+    }
+
+    public void setContratos(List<Contrato> contratos) {
+        this.contratos = contratos;
+    }
+
     public Set<Role> getRoles() {
         return roles;
     }
 
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
+    }
+
+    public String getTokenRecuperacion() {
+        return tokenRecuperacion;
+    }
+
+    public void setTokenRecuperacion(String tokenRecuperacion) {
+        this.tokenRecuperacion = tokenRecuperacion;
     }
 }
