@@ -1,11 +1,13 @@
 package mx.edu.utez.sistemaContratos.usuario.control;
 
 import mx.edu.utez.sistemaContratos.usuario.model.Usuario;
+import mx.edu.utez.sistemaContratos.usuario.model.UsuarioDto;
 import mx.edu.utez.sistemaContratos.utils.Message;
 import mx.edu.utez.sistemaContratos.utils.TypesResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -91,5 +93,15 @@ public class UsuarioController {
         // En JWT, simplemente se elimina el token en el lado del cliente
         Message mensaje = usuarioService.cerrarSesion();
         return ResponseEntity.ok(mensaje);
+    }
+
+    @PostMapping("/send-correo")
+    public ResponseEntity<Object> save(@Validated({UsuarioDto.FindCorreo.class}) @RequestBody UsuarioDto dto){
+        return usuarioService.sendCorreo(dto);
+    }
+
+    @PostMapping("/verify-code")
+    public ResponseEntity<Object> verifyCode(@Validated({UsuarioDto.VerifyCode.class}) @RequestBody UsuarioDto dto){
+        return usuarioService.verifyCode(dto);
     }
 }

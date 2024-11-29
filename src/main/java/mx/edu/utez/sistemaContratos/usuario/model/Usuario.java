@@ -20,6 +20,9 @@ public class Usuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "code", columnDefinition = "VARCHAR(10)")
+    private String code;
+
     @NotBlank(message = "El nombre es obligatorio")
     @Column(name = "nombre", columnDefinition = "VARCHAR(70)")
     private String nombre;
@@ -58,13 +61,14 @@ public class Usuario {
     )
     private Set<Role> roles = new HashSet<>();
 
-    @Column(name = "token_recuperacion", columnDefinition = "VARCHAR(255)")
-    private String tokenRecuperacion;
+
 
     // Constructores, Getters y Setters omitidos para brevedad
 
-    public Usuario(Long id, String nombre, String apellidos, String correo, String telefono, String contrasena, boolean status, List<Contrato> contratos, Set<Role> roles, String tokenRecuperacion) {
+
+    public Usuario(Long id, String code, String nombre, String apellidos, String correo, String telefono, String contrasena, boolean status, List<Contrato> contratos, Set<Role> roles) {
         this.id = id;
+        this.code = code;
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.correo = correo;
@@ -73,8 +77,16 @@ public class Usuario {
         this.status = status;
         this.contratos = contratos;
         this.roles = roles;
-        this.tokenRecuperacion = tokenRecuperacion;
     }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
     public Usuario() {  }
 
     public Long getId() {
@@ -149,11 +161,5 @@ public class Usuario {
         this.roles = roles;
     }
 
-    public String getTokenRecuperacion() {
-        return tokenRecuperacion;
-    }
 
-    public void setTokenRecuperacion(String tokenRecuperacion) {
-        this.tokenRecuperacion = tokenRecuperacion;
-    }
 }

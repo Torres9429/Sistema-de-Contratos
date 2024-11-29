@@ -14,8 +14,11 @@ public class UsuarioDto {
     @NotBlank(groups = {Modify.class, Register.class}, message = "Son necesarios los apellidos")
     private String apellidos;
 
-    @NotBlank(groups = {Modify.class, Register.class}, message = "Es necesario el correo electrónico")
+    @NotBlank(groups = {Modify.class, Register.class,FindCorreo.class}, message = "Es necesario el correo electrónico")
     private String correo;
+
+    @NotBlank(groups = {VerifyCode.class})
+    private String code;
 
     @NotBlank(groups = {Modify.class, Register.class}, message = "Es necesario el teléfono")
     private String telefono;
@@ -31,14 +34,25 @@ public class UsuarioDto {
     }
 
     // Constructor con parámetros para instanciar rápidamente con los datos
-    public UsuarioDto(Long id, String nombre, String apellidos, String correo, String telefono, String contrasena, String role) {
+
+
+    public UsuarioDto(Long id, String nombre, String apellidos, String correo, String code, String telefono, String contrasena, String role) {
         this.id = id;
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.correo = correo;
+        this.code = code;
         this.telefono = telefono;
         this.contrasena = contrasena;
         this.role = role;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
     }
 
     // Getters y Setters
@@ -102,4 +116,6 @@ public class UsuarioDto {
     public interface Register {}
     public interface Modify {}
     public interface ChangeStatus {}
+    public interface VerifyCode {}
+    public interface FindCorreo {}
 }
