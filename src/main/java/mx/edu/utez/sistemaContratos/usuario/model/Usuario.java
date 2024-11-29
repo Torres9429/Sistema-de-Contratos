@@ -24,7 +24,7 @@ public class Usuario {
     private String code;
 
     @NotBlank(message = "El nombre es obligatorio")
-    @Column(name = "nombre", columnDefinition = "VARCHAR(70)")
+    @Column(nullable = false, unique = true, name = "nombre", columnDefinition = "VARCHAR(70)")
     private String nombre;
 
     @NotBlank(message = "Los apellidos son obligatorios")
@@ -43,7 +43,7 @@ public class Usuario {
 
     @NotBlank(message = "La contraseña es obligatoria")
     @Size(min = 8, message = "La contraseña debe tener al menos 8 caracteres")
-    @Column(name = "contrasena", columnDefinition = "VARCHAR(70)")
+    @Column(nullable = false ,name = "contrasena", columnDefinition = "VARCHAR(70)")
     private String contrasena;
 
     @Column(name = "status", columnDefinition = "BOOL DEFAULT TRUE")
