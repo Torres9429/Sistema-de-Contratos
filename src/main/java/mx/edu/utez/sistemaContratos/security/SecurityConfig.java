@@ -32,8 +32,8 @@ public class SecurityConfig {
                         .requestMatchers("/state/**").hasAuthority("ROLE_STATE_ACCESS")
                         .anyRequest().authenticated()
                 )
-                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-                .addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
+                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
+                //.addFilterBefore(jwtRequestFilter, UsernamePassword AuthenticationFilter.class);
 
         return http.build();
     }
