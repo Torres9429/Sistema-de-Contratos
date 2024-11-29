@@ -116,7 +116,7 @@ public class ContratoService {
     public ResponseEntity<Message> changeStatus(ContratoDto dto) {
         Optional<Contrato> contratoOptional = contratoRepository.findById(dto.getId());
         if(!contratoOptional.isPresent()){
-            return new ResponseEntity<>(new Message("La pregunta no existe",TypesResponse.ERROR),HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>(new Message("El contrato no existe",TypesResponse.ERROR),HttpStatus.NOT_FOUND);
         }
         Contrato contrato = contratoOptional.get();
         contrato.setStatus(!contrato.isStatus());

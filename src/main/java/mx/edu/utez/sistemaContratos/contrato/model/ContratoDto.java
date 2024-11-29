@@ -12,7 +12,7 @@ public class ContratoDto {
     private String nombre;
     @NotBlank(groups = {Modify.class, Register.class}, message = "Es necesario la descripción")
     private String descripcion;
-    @NotNull(groups = {ContratoDto.Modify.class, ContratoDto.ChangeStatus.class},message = "La fecha no puede ser nula")
+    @NotNull(groups = {Modify.class, Register.class}, message = "La fecha no puede ser nula")
     private Date fechaVencimiento;
     @NotNull(groups = {ContratoDto.Modify.class, ContratoDto.ChangeStatus.class},message = "El id del cliente no puede ser nulo")
     private Long clienteId;
