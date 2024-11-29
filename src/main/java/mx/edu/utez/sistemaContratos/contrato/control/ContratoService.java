@@ -64,7 +64,7 @@ public class ContratoService {
         if (dto.getClienteId() == null) {
             return new ResponseEntity<>(new Message("El ID de cliente no puede ser nulo", TypesResponse.WARNING), HttpStatus.BAD_REQUEST);
         }
-        if (dto.getCategoriaContrato_id() == null) {
+        if (dto.getCategoriaId() == null) {
             return new ResponseEntity<>(new Message("El ID de categoría no puede ser nulo", TypesResponse.WARNING), HttpStatus.BAD_REQUEST);
         }
 
@@ -72,7 +72,7 @@ public class ContratoService {
         if (cliente == null) {
             return new ResponseEntity<>(new Message("Cliente no encontrado", TypesResponse.WARNING), HttpStatus.BAD_REQUEST);
         }
-        Categoria categoria = categoriaRepository.findById(dto.getCategoriaContrato_id()).orElse(null);
+        Categoria categoria = categoriaRepository.findById(dto.getCategoriaId()).orElse(null);
         if (categoria == null) {
             return new ResponseEntity<>(new Message("Categoría de contrato no encontrada", TypesResponse.WARNING), HttpStatus.BAD_REQUEST);
         }
