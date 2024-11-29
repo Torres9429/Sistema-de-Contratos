@@ -4,24 +4,58 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
 public class UsuarioDto {
+
     @NotNull(groups = {Modify.class, ChangeStatus.class}, message = "Es necesario el id")
     private Long id;
+
     @NotBlank(groups = {Modify.class, Register.class}, message = "Es necesario el nombre")
     private String nombre;
+
     @NotBlank(groups = {Modify.class, Register.class}, message = "Son necesarios los apellidos")
     private String apellidos;
-    @NotBlank(groups = {Modify.class, Register.class}, message = "Es necesario el correo electrónico")
-    private String correo;
-    @NotBlank(groups = {Modify.class, Register.class}, message = "Es necesario el telefóno")
-    private String telefono;
-    @NotBlank(groups = {Modify.class, Register.class}, message = "Es necesario la contraseña")
-    private String contrasena;
-    @NotBlank(groups = {Modify.class, Register.class}, message = "Es necesario el rol")
-    private String role;
 
+    @NotBlank(groups = {Modify.class, Register.class,FindCorreo.class}, message = "Es necesario el correo electrónico")
+    private String correo;
+
+    @NotBlank(groups = {VerifyCode.class})
+    private String code;
+
+    @NotBlank(groups = {Modify.class, Register.class}, message = "Es necesario el teléfono")
+    private String telefono;
+
+    @NotBlank(groups = {Modify.class, Register.class}, message = "Es necesaria la contraseña")
+    private String contrasena;
+
+    @NotBlank(groups = {Modify.class, Register.class}, message = "Es necesario el rol")
+    private String role; // Corregido 'role' para mantener consistencia en los nombres
+
+    // Constructor vacío para la serialización o la creación de instancias sin datos
     public UsuarioDto() {
     }
 
+    // Constructor con parámetros para instanciar rápidamente con los datos
+
+
+    public UsuarioDto(Long id, String nombre, String apellidos, String correo, String code, String telefono, String contrasena, String role) {
+        this.id = id;
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.correo = correo;
+        this.code = code;
+        this.telefono = telefono;
+        this.contrasena = contrasena;
+        this.role = role;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    // Getters y Setters
     public Long getId() {
         return id;
     }
@@ -70,20 +104,18 @@ public class UsuarioDto {
         this.contrasena = contrasena;
     }
 
-    public String getRol() {
+    public String getRole() { // Renombrado a getRole() para alinearse con el atributo 'role'
         return role;
     }
 
-    public void setRol(String rol) {
+    public void setRole(String role) { // Renombrado a setRole() para mantener la consistencia
         this.role = role;
     }
 
-    public interface Register {
-    }
-
-    public interface Modify {
-    }
-
-    public interface ChangeStatus {
-    }
+    // Interfaces para validación
+    public interface Register {}
+    public interface Modify {}
+    public interface ChangeStatus {}
+    public interface VerifyCode {}
+    public interface FindCorreo {}
 }
