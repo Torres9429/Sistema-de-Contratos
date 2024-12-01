@@ -60,7 +60,7 @@ class UsuarioTest {
         Usuario usuario = new Usuario("Liliana", "Arcos", "arcoslili@gmail.com", "7771234567", "Password123", "Usuario", true);
         usuarioService.registrarUsuario(usuario);
 
-        boolean resultado = usuarioService.editarUsuario(usuario, "Liliana Actualizada");
+        boolean resultado = usuarioService.editarUsuario(usuario, "Liliana Actualizada", "Arcos","7771234567");
 
         assertTrue(resultado);
         assertEquals("Liliana Actualizada", usuario.getNombre());
@@ -72,9 +72,9 @@ class UsuarioTest {
         Usuario usuario = new Usuario("Liliana", "Arcos", "arcoslili@gmail.com", "7771234567", "Password123", "Usuario", true);
         usuarioService.registrarUsuario(usuario);
 
-        Exception exception = assertThrows(IllegalArgumentException.class, () -> usuarioService.editarUsuario(usuario, ""));
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> usuarioService.editarUsuario(usuario, "Liliana", "", "7771234567"));
 
-        assertEquals("El nombre no puede estar vacío", exception.getMessage());
+        assertEquals("El apellido no puede estar vacío", exception.getMessage());
     }
 
     @Test

@@ -26,13 +26,22 @@ public class UsuarioService {
         return usuarios;
     }
 
-    public boolean editarUsuario(Usuario usuario, String nuevoNombre) {
+    public boolean editarUsuario(Usuario usuario, String nuevoNombre, String nuevoApellido, String nuevoTelefono) {
         if (nuevoNombre == null || nuevoNombre.isEmpty()) {
             throw new IllegalArgumentException("El nombre no puede estar vacío");
         }
+        if (nuevoApellido == null || nuevoApellido.isEmpty()) {
+            throw new IllegalArgumentException("El apellido no puede estar vacío");
+        }
+        if (nuevoTelefono == null || nuevoTelefono.isEmpty()) {
+            throw new IllegalArgumentException("El teléfono no puede estar vacío");
+        }
         usuario.setNombre(nuevoNombre);
+        usuario.setApellido(nuevoApellido);
+        usuario.setTelefono(nuevoTelefono);
         return true;
     }
+
 
     public boolean cambiarEstadoUsuario(Usuario usuario, boolean nuevoEstado) {
         usuario.setEstado(nuevoEstado);
