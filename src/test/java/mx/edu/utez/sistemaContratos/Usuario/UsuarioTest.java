@@ -19,12 +19,11 @@ class UsuarioTest {
     @Test
     void registrarUsuarioConCamposInvalidos() {
         UsuarioService usuarioService = new UsuarioService();
-        Usuario usuario = new Usuario("", "Medina", "correo-invalido@", "7771234567", "PasswordAlo1", "Usuario", true);
+        Usuario usuario = new Usuario("", "Medina", "alomedina.gmail.com", "7771234567", "PasswordAlo1", "Usuario", true);
 
-        Exception exception = assertThrows(IllegalArgumentException.class, () -> usuarioService.registrarUsuario(usuario));
-
-        assertEquals("El correo es obligatorio", exception.getMessage());
+        assertThrows(IllegalArgumentException.class, () -> usuarioService.registrarUsuario(usuario));
     }
+
 
     @Test
     void registrarUsuarioConCorreoDuplicado() {

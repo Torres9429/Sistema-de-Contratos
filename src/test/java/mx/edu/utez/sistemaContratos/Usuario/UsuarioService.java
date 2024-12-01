@@ -10,6 +10,9 @@ public class UsuarioService {
         if (usuario.getCorreo() == null || usuario.getCorreo().isEmpty()) {
             throw new IllegalArgumentException("El correo es obligatorio");
         }
+        if (usuario.getNombre() == null || usuario.getNombre().isEmpty()) {
+            throw new IllegalArgumentException("El nombre es obligatorio");
+        }
         for (Usuario u : usuarios) {
             if (u.getCorreo().equals(usuario.getCorreo())) {
                 throw new IllegalArgumentException("Correo duplicado");
