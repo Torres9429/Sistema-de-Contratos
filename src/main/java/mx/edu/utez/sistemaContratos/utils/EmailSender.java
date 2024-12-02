@@ -1,5 +1,5 @@
 package mx.edu.utez.sistemaContratos.utils;
-/*
+
 import jakarta.mail.internet.MimeMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,10 +11,11 @@ import org.springframework.stereotype.Service;
 import java.util.UUID;
 
 @Service
-public class CorreoSender {
-    private final static Logger logger = LoggerFactory.getLogger(CorreoSender.class);
+public class EmailSender {
+    private final static Logger logger = LoggerFactory.getLogger(EmailSender.class);
+
     @Autowired
-    private JavaMailSender correoSender;
+    private JavaMailSender emailSender;
 
     String generateContentId(String prefix) {
         return String.format("%s-%s", prefix, UUID.randomUUID());
@@ -22,19 +23,19 @@ public class CorreoSender {
 
     public void sendSimpleMessage(String to, String subject, String text) {
         try {
-            MimeMessage mimeMessage = correoSender.createMimeMessage();
+            MimeMessage mimeMessage = emailSender.createMimeMessage();
             MimeMessageHelper helper = new MimeMessageHelper(mimeMessage, "utf-8");
             String htlmMsg = "<h3 style='color:rgb(0,46,93);'>Sistema de Prueba</h3><br>" +
                     text + "<br><hr style='border-color:rgb(0,171,132);'/><p style='text-align:justify;'>Si no solicitaste este cambio, ignora el correo.</p>" +
                     "<p style='text-align:justify;'>Esta cuenta de correo no es supervisada, no responder este mensaje.</p>";
-
+            helper.setFrom("saac.oficial.utez@gmail.com");
             helper.setTo(to);
             helper.setSubject(subject);
             helper.setText(htlmMsg, true);
-            correoSender.send(mimeMessage);
+            emailSender.send(mimeMessage);
         } catch (Exception e) {
             e.printStackTrace();
             logger.error("No se pudo enviar el correo");
         }
     }
-}*/
+}

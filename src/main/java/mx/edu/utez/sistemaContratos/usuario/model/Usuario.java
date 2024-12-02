@@ -87,7 +87,7 @@ public class Usuario {
         this.code = code;
     }
 
-    public Usuario() {  }
+    public Usuario(String nombre, String apellidos, String correo, String telefono, boolean b) {  }
 
     public Long getId() {
         return id;

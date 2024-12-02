@@ -26,13 +26,13 @@ public class UsuarioController {
     }
 
     @PostMapping("/registrar")
-    public ResponseEntity<Message> registrarUsuario(@RequestBody Usuario usuario) {
+    public ResponseEntity<Message> registrarUsuario(@RequestBody UsuarioDto usuario) {
         System.out.println("Iniciando registro de usuario: " + usuario);
 
         try {
-            Message nuevoUsuario = usuarioService.registrarUsuario(usuario);
-            System.out.println("Usuario registrado: " + nuevoUsuario);
-            return ResponseEntity.status(HttpStatus.CREATED).body(nuevoUsuario);
+           return usuarioService.registrarUsuario(usuario);
+            //System.out.println("Usuario registrado: " + nuevoUsuario);
+            ///return ResponseEntity.status(HttpStatus.CREATED).body(nuevoUsuario);
         } catch (IllegalArgumentException e) {
             System.err.println("Error de datos: " + e.getMessage());
             return ResponseEntity.status(HttpStatus.BAD_REQUEST)
@@ -43,7 +43,7 @@ public class UsuarioController {
                     .body(new Message("Error en el servidor", TypesResponse.ERROR));
         }
     }
-    @GetMapping
+    @GetMapping("/all")
     public ResponseEntity<Message> consultarUsuarios() {
         List<Usuario> usuarios = usuarioService.consultarUsuarios();
         return ResponseEntity.ok(new Message(usuarios, "Usuarios consultados correctamente", TypesResponse.SUCCESS));
@@ -97,7 +97,7 @@ public class UsuarioController {
 
     @PostMapping("/send-correo")
     public ResponseEntity<Object> save(@Validated({UsuarioDto.FindCorreo.class}) @RequestBody UsuarioDto dto){
-        return usuarioService.sendCorreo(dto);
+        return usuarioService.sendEmail(dto);
     }
 
     @PostMapping("/verify-code")

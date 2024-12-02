@@ -1,0 +1,893 @@
+2024-12-02T09:15:27.007-06:00  INFO 30744 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Starting SistemaContratosApplication using Java 21.0.3 with PID 30744 (E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos\target\classes started by rocit in E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos)
+2024-12-02T09:15:27.011-06:00  INFO 30744 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-12-02T09:15:28.219-06:00  INFO 30744 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-02T09:15:28.359-06:00  INFO 30744 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 115 ms. Found 5 JPA repository interfaces.
+2024-12-02T09:15:29.217-06:00  INFO 30744 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-02T09:15:29.241-06:00  INFO 30744 --- [sistemaContratos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-02T09:15:29.241-06:00  INFO 30744 --- [sistemaContratos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-12-02T09:15:29.359-06:00  INFO 30744 --- [sistemaContratos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-02T09:15:29.359-06:00  INFO 30744 --- [sistemaContratos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2274 ms
+2024-12-02T09:15:29.616-06:00  INFO 30744 --- [sistemaContratos] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-02T09:15:29.699-06:00  INFO 30744 --- [sistemaContratos] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-12-02T09:15:29.761-06:00  INFO 30744 --- [sistemaContratos] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-02T09:15:30.298-06:00  INFO 30744 --- [sistemaContratos] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-02T09:15:30.345-06:00  INFO 30744 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-02T09:15:30.924-06:00  INFO 30744 --- [sistemaContratos] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1a5b7394
+2024-12-02T09:15:30.928-06:00  INFO 30744 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-02T09:15:31.017-06:00  WARN 30744 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-02T09:15:31.020-06:00  WARN 30744 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-12-02T09:15:32.881-06:00  INFO 30744 --- [sistemaContratos] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-02T09:15:33.357-06:00  INFO 30744 --- [sistemaContratos] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T09:15:33.879-06:00  INFO 30744 --- [sistemaContratos] [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static org.springframework.mail.javamail.JavaMailSender mx.edu.utez.sistemaContratos.utils.CorreoSender.correoSender
+2024-12-02T09:15:34.000-06:00  WARN 30744 --- [sistemaContratos] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-02T09:15:34.673-06:00  INFO 30744 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-12-02T09:15:34.687-06:00  INFO 30744 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Started SistemaContratosApplication in 8.389 seconds (process running for 9.506)
+2024-12-02T09:15:55.562-06:00  INFO 30744 --- [sistemaContratos] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-02T09:15:55.563-06:00  INFO 30744 --- [sistemaContratos] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-02T09:15:55.566-06:00  INFO 30744 --- [sistemaContratos] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-12-02T09:16:05.155-06:00  WARN 30744 --- [sistemaContratos] [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2024-12-02T09:16:31.067-06:00  INFO 30744 --- [sistemaContratos] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T09:16:31.070-06:00  INFO 30744 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-02T09:16:31.088-06:00  INFO 30744 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-02T09:16:40.105-06:00  INFO 2464 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Starting SistemaContratosApplication using Java 21.0.3 with PID 2464 (E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos\target\classes started by rocit in E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos)
+2024-12-02T09:16:40.109-06:00  INFO 2464 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-12-02T09:16:41.147-06:00  INFO 2464 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-02T09:16:41.260-06:00  INFO 2464 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 100 ms. Found 5 JPA repository interfaces.
+2024-12-02T09:16:42.053-06:00  INFO 2464 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-02T09:16:42.076-06:00  INFO 2464 --- [sistemaContratos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-02T09:16:42.077-06:00  INFO 2464 --- [sistemaContratos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-12-02T09:16:42.171-06:00  INFO 2464 --- [sistemaContratos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-02T09:16:42.171-06:00  INFO 2464 --- [sistemaContratos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1994 ms
+2024-12-02T09:16:42.422-06:00  INFO 2464 --- [sistemaContratos] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-02T09:16:42.508-06:00  INFO 2464 --- [sistemaContratos] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-12-02T09:16:42.569-06:00  INFO 2464 --- [sistemaContratos] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-02T09:16:43.105-06:00  INFO 2464 --- [sistemaContratos] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-02T09:16:43.151-06:00  INFO 2464 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-02T09:16:43.697-06:00  INFO 2464 --- [sistemaContratos] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@34e990cc
+2024-12-02T09:16:43.701-06:00  INFO 2464 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-02T09:16:43.775-06:00  WARN 2464 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-02T09:16:43.778-06:00  WARN 2464 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-12-02T09:16:45.498-06:00  INFO 2464 --- [sistemaContratos] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-02T09:16:45.909-06:00  INFO 2464 --- [sistemaContratos] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T09:16:46.465-06:00  INFO 2464 --- [sistemaContratos] [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static org.springframework.mail.javamail.JavaMailSender mx.edu.utez.sistemaContratos.utils.CorreoSender.correoSender
+2024-12-02T09:16:46.606-06:00  WARN 2464 --- [sistemaContratos] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-02T09:16:47.303-06:00  INFO 2464 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-12-02T09:16:47.316-06:00  INFO 2464 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Started SistemaContratosApplication in 7.868 seconds (process running for 8.975)
+2024-12-02T09:16:52.905-06:00  INFO 2464 --- [sistemaContratos] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-02T09:16:52.905-06:00  INFO 2464 --- [sistemaContratos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-02T09:16:52.908-06:00  INFO 2464 --- [sistemaContratos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-12-02T09:16:52.943-06:00  WARN 2464 --- [sistemaContratos] [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2024-12-02T09:16:54.270-06:00  WARN 2464 --- [sistemaContratos] [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2024-12-02T09:16:54.676-06:00  WARN 2464 --- [sistemaContratos] [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2024-12-02T09:18:06.375-06:00 ERROR 2464 --- [sistemaContratos] [http-nio-8080-exec-6] m.e.u.s.utils.CorreoSender               : No se pudo enviar el correo
+2024-12-02T09:18:43.208-06:00  INFO 2464 --- [sistemaContratos] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T09:18:43.212-06:00  INFO 2464 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-02T09:18:43.222-06:00  INFO 2464 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-02T09:18:50.296-06:00  INFO 1408 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Starting SistemaContratosApplication using Java 21.0.3 with PID 1408 (E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos\target\classes started by rocit in E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos)
+2024-12-02T09:18:50.300-06:00  INFO 1408 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-12-02T09:18:51.389-06:00  INFO 1408 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-02T09:18:51.517-06:00  INFO 1408 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 111 ms. Found 5 JPA repository interfaces.
+2024-12-02T09:18:52.366-06:00  INFO 1408 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-02T09:18:52.390-06:00  INFO 1408 --- [sistemaContratos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-02T09:18:52.391-06:00  INFO 1408 --- [sistemaContratos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-12-02T09:18:52.489-06:00  INFO 1408 --- [sistemaContratos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-02T09:18:52.490-06:00  INFO 1408 --- [sistemaContratos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2116 ms
+2024-12-02T09:18:52.752-06:00  INFO 1408 --- [sistemaContratos] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-02T09:18:52.853-06:00  INFO 1408 --- [sistemaContratos] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-12-02T09:18:52.916-06:00  INFO 1408 --- [sistemaContratos] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-02T09:18:53.546-06:00  INFO 1408 --- [sistemaContratos] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-02T09:18:53.591-06:00  INFO 1408 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-02T09:18:54.150-06:00  INFO 1408 --- [sistemaContratos] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7e4ac598
+2024-12-02T09:18:54.153-06:00  INFO 1408 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-02T09:18:54.234-06:00  WARN 1408 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-02T09:18:54.237-06:00  WARN 1408 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-12-02T09:18:55.968-06:00  INFO 1408 --- [sistemaContratos] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-02T09:18:56.385-06:00  INFO 1408 --- [sistemaContratos] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T09:18:56.877-06:00  INFO 1408 --- [sistemaContratos] [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static org.springframework.mail.javamail.JavaMailSender mx.edu.utez.sistemaContratos.utils.CorreoSender.correoSender
+2024-12-02T09:18:56.993-06:00  WARN 1408 --- [sistemaContratos] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-02T09:18:57.677-06:00  INFO 1408 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-12-02T09:18:57.690-06:00  INFO 1408 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Started SistemaContratosApplication in 8.12 seconds (process running for 9.244)
+2024-12-02T09:19:07.840-06:00  INFO 1408 --- [sistemaContratos] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-02T09:19:07.840-06:00  INFO 1408 --- [sistemaContratos] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-02T09:19:07.844-06:00  INFO 1408 --- [sistemaContratos] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-12-02T09:21:14.677-06:00  WARN 1408 --- [sistemaContratos] [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries]
+2024-12-02T09:23:01.009-06:00 ERROR 1408 --- [sistemaContratos] [http-nio-8080-exec-4] m.e.u.s.utils.CorreoSender               : No se pudo enviar el correo
+2024-12-02T09:24:00.556-06:00  INFO 1408 --- [sistemaContratos] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T09:24:00.559-06:00  INFO 1408 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-02T09:24:00.572-06:00  INFO 1408 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-02T09:24:08.279-06:00  INFO 23116 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Starting SistemaContratosApplication using Java 21.0.3 with PID 23116 (E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos\target\classes started by rocit in E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos)
+2024-12-02T09:24:08.282-06:00  INFO 23116 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-12-02T09:24:09.381-06:00  INFO 23116 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-02T09:24:09.491-06:00  INFO 23116 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 98 ms. Found 5 JPA repository interfaces.
+2024-12-02T09:24:10.354-06:00  INFO 23116 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-02T09:24:10.380-06:00  INFO 23116 --- [sistemaContratos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-02T09:24:10.381-06:00  INFO 23116 --- [sistemaContratos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-12-02T09:24:10.476-06:00  INFO 23116 --- [sistemaContratos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-02T09:24:10.476-06:00  INFO 23116 --- [sistemaContratos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2106 ms
+2024-12-02T09:24:10.749-06:00  INFO 23116 --- [sistemaContratos] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-02T09:24:10.848-06:00  INFO 23116 --- [sistemaContratos] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-12-02T09:24:10.906-06:00  INFO 23116 --- [sistemaContratos] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-02T09:24:11.407-06:00  INFO 23116 --- [sistemaContratos] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-02T09:24:11.451-06:00  INFO 23116 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-02T09:24:12.068-06:00  INFO 23116 --- [sistemaContratos] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1a5b7394
+2024-12-02T09:24:12.071-06:00  INFO 23116 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-02T09:24:12.140-06:00  WARN 23116 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-02T09:24:12.142-06:00  WARN 23116 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-12-02T09:24:13.875-06:00  INFO 23116 --- [sistemaContratos] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-02T09:24:14.268-06:00  INFO 23116 --- [sistemaContratos] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T09:24:14.751-06:00  INFO 23116 --- [sistemaContratos] [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static org.springframework.mail.javamail.JavaMailSender mx.edu.utez.sistemaContratos.utils.CorreoSender.correoSender
+2024-12-02T09:24:14.864-06:00  WARN 23116 --- [sistemaContratos] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-02T09:24:15.518-06:00  INFO 23116 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-12-02T09:24:15.532-06:00  INFO 23116 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Started SistemaContratosApplication in 7.946 seconds (process running for 9.055)
+2024-12-02T09:24:24.455-06:00  INFO 23116 --- [sistemaContratos] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-02T09:24:24.456-06:00  INFO 23116 --- [sistemaContratos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-02T09:24:24.459-06:00  INFO 23116 --- [sistemaContratos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-12-02T09:24:31.751-06:00 ERROR 23116 --- [sistemaContratos] [http-nio-8080-exec-2] m.e.u.s.utils.CorreoSender               : No se pudo enviar el correo
+2024-12-02T09:25:37.356-06:00  INFO 23116 --- [sistemaContratos] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T09:25:37.360-06:00  INFO 23116 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-02T09:25:37.377-06:00  INFO 23116 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-02T09:25:44.159-06:00  INFO 27732 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Starting SistemaContratosApplication using Java 21.0.3 with PID 27732 (E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos\target\classes started by rocit in E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos)
+2024-12-02T09:25:44.162-06:00  INFO 27732 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-12-02T09:25:45.231-06:00  INFO 27732 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-02T09:25:45.352-06:00  INFO 27732 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 108 ms. Found 5 JPA repository interfaces.
+2024-12-02T09:25:46.211-06:00  INFO 27732 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-02T09:25:46.234-06:00  INFO 27732 --- [sistemaContratos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-02T09:25:46.235-06:00  INFO 27732 --- [sistemaContratos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-12-02T09:25:46.328-06:00  INFO 27732 --- [sistemaContratos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-02T09:25:46.329-06:00  INFO 27732 --- [sistemaContratos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2093 ms
+2024-12-02T09:25:46.605-06:00  INFO 27732 --- [sistemaContratos] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-02T09:25:46.691-06:00  INFO 27732 --- [sistemaContratos] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-12-02T09:25:46.745-06:00  INFO 27732 --- [sistemaContratos] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-02T09:25:47.247-06:00  INFO 27732 --- [sistemaContratos] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-02T09:25:47.290-06:00  INFO 27732 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-02T09:25:47.825-06:00  INFO 27732 --- [sistemaContratos] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@269c7104
+2024-12-02T09:25:47.828-06:00  INFO 27732 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-02T09:25:47.905-06:00  WARN 27732 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-02T09:25:47.907-06:00  WARN 27732 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-12-02T09:25:49.652-06:00  INFO 27732 --- [sistemaContratos] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-02T09:25:50.075-06:00  INFO 27732 --- [sistemaContratos] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T09:25:50.722-06:00  WARN 27732 --- [sistemaContratos] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-02T09:25:51.435-06:00  INFO 27732 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-12-02T09:25:51.449-06:00  INFO 27732 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Started SistemaContratosApplication in 8.023 seconds (process running for 9.153)
+2024-12-02T09:26:02.812-06:00  INFO 27732 --- [sistemaContratos] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-02T09:26:02.812-06:00  INFO 27732 --- [sistemaContratos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-02T09:26:02.814-06:00  INFO 27732 --- [sistemaContratos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-12-02T09:26:05.045-06:00 ERROR 27732 --- [sistemaContratos] [http-nio-8080-exec-2] m.e.u.s.utils.CorreoSender               : No se pudo enviar el correo
+2024-12-02T09:31:18.924-06:00  INFO 27732 --- [sistemaContratos] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T09:31:18.927-06:00  INFO 27732 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-02T09:31:18.979-06:00  INFO 27732 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-02T09:31:29.740-06:00  INFO 31312 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Starting SistemaContratosApplication using Java 21.0.3 with PID 31312 (E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos\target\classes started by rocit in E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos)
+2024-12-02T09:31:29.744-06:00  INFO 31312 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-12-02T09:31:30.830-06:00  INFO 31312 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-02T09:31:30.952-06:00  INFO 31312 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 108 ms. Found 5 JPA repository interfaces.
+2024-12-02T09:31:31.763-06:00  INFO 31312 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-02T09:31:31.786-06:00  INFO 31312 --- [sistemaContratos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-02T09:31:31.787-06:00  INFO 31312 --- [sistemaContratos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-12-02T09:31:31.880-06:00  INFO 31312 --- [sistemaContratos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-02T09:31:31.881-06:00  INFO 31312 --- [sistemaContratos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2064 ms
+2024-12-02T09:31:32.135-06:00  INFO 31312 --- [sistemaContratos] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-02T09:31:32.217-06:00  INFO 31312 --- [sistemaContratos] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-12-02T09:31:32.282-06:00  INFO 31312 --- [sistemaContratos] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-02T09:31:32.770-06:00  INFO 31312 --- [sistemaContratos] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-02T09:31:32.814-06:00  INFO 31312 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-02T09:31:33.405-06:00  INFO 31312 --- [sistemaContratos] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6de84336
+2024-12-02T09:31:33.409-06:00  INFO 31312 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-02T09:31:33.484-06:00  WARN 31312 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-02T09:31:33.486-06:00  WARN 31312 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-12-02T09:31:35.194-06:00  INFO 31312 --- [sistemaContratos] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-02T09:31:35.609-06:00  INFO 31312 --- [sistemaContratos] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T09:31:36.192-06:00  WARN 31312 --- [sistemaContratos] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-02T09:31:36.862-06:00  INFO 31312 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-12-02T09:31:36.876-06:00  INFO 31312 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Started SistemaContratosApplication in 7.883 seconds (process running for 8.949)
+2024-12-02T09:31:43.492-06:00  INFO 31312 --- [sistemaContratos] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-02T09:31:43.493-06:00  INFO 31312 --- [sistemaContratos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-02T09:31:43.495-06:00  INFO 31312 --- [sistemaContratos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-12-02T09:31:46.172-06:00 ERROR 31312 --- [sistemaContratos] [http-nio-8080-exec-3] m.e.u.s.utils.CorreoSender               : No se pudo enviar el correo
+2024-12-02T09:33:01.772-06:00  INFO 31312 --- [sistemaContratos] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T09:33:01.775-06:00  INFO 31312 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-02T09:33:01.787-06:00  INFO 31312 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-02T09:33:08.458-06:00  INFO 31688 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Starting SistemaContratosApplication using Java 21.0.3 with PID 31688 (E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos\target\classes started by rocit in E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos)
+2024-12-02T09:33:08.461-06:00  INFO 31688 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-12-02T09:33:09.540-06:00  INFO 31688 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-02T09:33:09.647-06:00  INFO 31688 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93 ms. Found 5 JPA repository interfaces.
+2024-12-02T09:33:10.437-06:00  INFO 31688 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-02T09:33:10.466-06:00  INFO 31688 --- [sistemaContratos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-02T09:33:10.467-06:00  INFO 31688 --- [sistemaContratos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-12-02T09:33:10.559-06:00  INFO 31688 --- [sistemaContratos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-02T09:33:10.560-06:00  INFO 31688 --- [sistemaContratos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2021 ms
+2024-12-02T09:33:10.825-06:00  INFO 31688 --- [sistemaContratos] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-02T09:33:10.906-06:00  INFO 31688 --- [sistemaContratos] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-12-02T09:33:10.954-06:00  INFO 31688 --- [sistemaContratos] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-02T09:33:11.445-06:00  INFO 31688 --- [sistemaContratos] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-02T09:33:11.490-06:00  INFO 31688 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-02T09:33:12.016-06:00  INFO 31688 --- [sistemaContratos] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@f9a5e3f
+2024-12-02T09:33:12.019-06:00  INFO 31688 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-02T09:33:12.095-06:00  WARN 31688 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-02T09:33:12.097-06:00  WARN 31688 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-12-02T09:33:13.791-06:00  INFO 31688 --- [sistemaContratos] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-02T09:33:14.245-06:00  INFO 31688 --- [sistemaContratos] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T09:33:14.961-06:00  WARN 31688 --- [sistemaContratos] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-02T09:33:15.581-06:00  INFO 31688 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-12-02T09:33:15.596-06:00  INFO 31688 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Started SistemaContratosApplication in 7.84 seconds (process running for 8.915)
+2024-12-02T09:33:26.589-06:00  INFO 31688 --- [sistemaContratos] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-02T09:33:26.589-06:00  INFO 31688 --- [sistemaContratos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-02T09:33:26.591-06:00  INFO 31688 --- [sistemaContratos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-12-02T09:33:51.520-06:00 ERROR 31688 --- [sistemaContratos] [http-nio-8080-exec-2] m.e.u.s.utils.CorreoSender               : No se pudo enviar el correo
+2024-12-02T09:37:18.889-06:00 ERROR 31688 --- [sistemaContratos] [http-nio-8080-exec-5] m.e.u.s.utils.CorreoSender               : No se pudo enviar el correo
+2024-12-02T09:38:51.374-06:00 ERROR 31688 --- [sistemaContratos] [http-nio-8080-exec-8] m.e.u.s.utils.CorreoSender               : No se pudo enviar el correo
+2024-12-02T09:58:46.956-06:00  INFO 31688 --- [sistemaContratos] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T09:58:46.961-06:00  INFO 31688 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-02T09:58:46.975-06:00  INFO 31688 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-02T09:58:56.605-06:00  INFO 23036 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Starting SistemaContratosApplication using Java 21.0.3 with PID 23036 (E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos\target\classes started by rocit in E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos)
+2024-12-02T09:58:56.609-06:00  INFO 23036 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-12-02T09:58:57.784-06:00  INFO 23036 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-02T09:58:57.930-06:00  INFO 23036 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 131 ms. Found 5 JPA repository interfaces.
+2024-12-02T09:58:58.827-06:00  INFO 23036 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-02T09:58:58.860-06:00  INFO 23036 --- [sistemaContratos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-02T09:58:58.861-06:00  INFO 23036 --- [sistemaContratos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-12-02T09:58:58.971-06:00  INFO 23036 --- [sistemaContratos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-02T09:58:58.971-06:00  INFO 23036 --- [sistemaContratos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2272 ms
+2024-12-02T09:58:59.260-06:00  INFO 23036 --- [sistemaContratos] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-02T09:58:59.353-06:00  INFO 23036 --- [sistemaContratos] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-12-02T09:58:59.417-06:00  INFO 23036 --- [sistemaContratos] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-02T09:58:59.940-06:00  INFO 23036 --- [sistemaContratos] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-02T09:58:59.984-06:00  INFO 23036 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-02T09:59:00.541-06:00  INFO 23036 --- [sistemaContratos] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4315fe1b
+2024-12-02T09:59:00.544-06:00  INFO 23036 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-02T09:59:00.616-06:00  WARN 23036 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-02T09:59:00.619-06:00  WARN 23036 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-12-02T09:59:01.962-06:00  INFO 23036 --- [sistemaContratos] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: mx.edu.utez.sistemaContratos.usuario.model.Usuario (class must be instantiated by Interceptor)
+2024-12-02T09:59:02.353-06:00  INFO 23036 --- [sistemaContratos] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-02T09:59:02.752-06:00  INFO 23036 --- [sistemaContratos] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T09:59:03.433-06:00  WARN 23036 --- [sistemaContratos] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-02T09:59:04.093-06:00  INFO 23036 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-12-02T09:59:04.106-06:00  INFO 23036 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Started SistemaContratosApplication in 8.194 seconds (process running for 9.334)
+2024-12-02T09:59:26.329-06:00  INFO 23036 --- [sistemaContratos] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-02T09:59:26.330-06:00  INFO 23036 --- [sistemaContratos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-02T09:59:26.333-06:00  INFO 23036 --- [sistemaContratos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-12-02T10:00:34.495-06:00  INFO 23036 --- [sistemaContratos] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T10:00:34.498-06:00  INFO 23036 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-02T10:00:34.544-06:00  INFO 23036 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-02T10:00:51.556-06:00  INFO 28656 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Starting SistemaContratosApplication using Java 21.0.3 with PID 28656 (E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos\target\classes started by rocit in E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos)
+2024-12-02T10:00:51.561-06:00  INFO 28656 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-12-02T10:00:52.665-06:00  INFO 28656 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-02T10:00:52.777-06:00  INFO 28656 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 99 ms. Found 5 JPA repository interfaces.
+2024-12-02T10:00:53.613-06:00  INFO 28656 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-02T10:00:53.636-06:00  INFO 28656 --- [sistemaContratos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-02T10:00:53.636-06:00  INFO 28656 --- [sistemaContratos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-12-02T10:00:53.725-06:00  INFO 28656 --- [sistemaContratos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-02T10:00:53.726-06:00  INFO 28656 --- [sistemaContratos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2089 ms
+2024-12-02T10:00:54.030-06:00  INFO 28656 --- [sistemaContratos] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-02T10:00:54.115-06:00  INFO 28656 --- [sistemaContratos] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-12-02T10:00:54.164-06:00  INFO 28656 --- [sistemaContratos] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-02T10:00:54.699-06:00  INFO 28656 --- [sistemaContratos] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-02T10:00:54.746-06:00  INFO 28656 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-02T10:00:55.301-06:00  INFO 28656 --- [sistemaContratos] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@63326a3a
+2024-12-02T10:00:55.306-06:00  INFO 28656 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-02T10:00:55.397-06:00  WARN 28656 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-02T10:00:55.399-06:00  WARN 28656 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-12-02T10:00:56.739-06:00  INFO 28656 --- [sistemaContratos] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: mx.edu.utez.sistemaContratos.usuario.model.Usuario (class must be instantiated by Interceptor)
+2024-12-02T10:00:57.188-06:00  INFO 28656 --- [sistemaContratos] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-02T10:00:57.599-06:00  INFO 28656 --- [sistemaContratos] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T10:00:58.318-06:00  WARN 28656 --- [sistemaContratos] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-02T10:00:58.972-06:00  INFO 28656 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-12-02T10:00:58.987-06:00  INFO 28656 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Started SistemaContratosApplication in 8.104 seconds (process running for 9.216)
+2024-12-02T10:01:11.889-06:00  INFO 28656 --- [sistemaContratos] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-02T10:01:11.889-06:00  INFO 28656 --- [sistemaContratos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-02T10:01:11.891-06:00  INFO 28656 --- [sistemaContratos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-12-02T10:01:14.113-06:00 ERROR 28656 --- [sistemaContratos] [http-nio-8080-exec-1] m.e.u.s.utils.CorreoSender               : No se pudo enviar el correo
+2024-12-02T10:06:51.281-06:00  INFO 28656 --- [sistemaContratos] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T10:06:51.285-06:00  INFO 28656 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-02T10:06:51.309-06:00  INFO 28656 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-02T10:06:58.770-06:00  INFO 32712 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Starting SistemaContratosApplication using Java 21.0.3 with PID 32712 (E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos\target\classes started by rocit in E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos)
+2024-12-02T10:06:58.773-06:00  INFO 32712 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-12-02T10:06:59.806-06:00  INFO 32712 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-02T10:06:59.930-06:00  INFO 32712 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 111 ms. Found 5 JPA repository interfaces.
+2024-12-02T10:07:00.736-06:00  INFO 32712 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-02T10:07:00.758-06:00  INFO 32712 --- [sistemaContratos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-02T10:07:00.759-06:00  INFO 32712 --- [sistemaContratos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-12-02T10:07:00.849-06:00  INFO 32712 --- [sistemaContratos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-02T10:07:00.851-06:00  INFO 32712 --- [sistemaContratos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2007 ms
+2024-12-02T10:07:01.090-06:00  INFO 32712 --- [sistemaContratos] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-02T10:07:01.170-06:00  INFO 32712 --- [sistemaContratos] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-12-02T10:07:01.229-06:00  INFO 32712 --- [sistemaContratos] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-02T10:07:01.701-06:00  INFO 32712 --- [sistemaContratos] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-02T10:07:01.745-06:00  INFO 32712 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-02T10:07:02.282-06:00  INFO 32712 --- [sistemaContratos] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@9f1ca74
+2024-12-02T10:07:02.285-06:00  INFO 32712 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-02T10:07:02.362-06:00  WARN 32712 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-02T10:07:02.363-06:00  WARN 32712 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-12-02T10:07:03.635-06:00  INFO 32712 --- [sistemaContratos] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: mx.edu.utez.sistemaContratos.usuario.model.Usuario (class must be instantiated by Interceptor)
+2024-12-02T10:07:04.037-06:00  INFO 32712 --- [sistemaContratos] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-02T10:07:04.439-06:00  INFO 32712 --- [sistemaContratos] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T10:07:05.056-06:00  WARN 32712 --- [sistemaContratos] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-02T10:07:05.693-06:00  INFO 32712 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-12-02T10:07:05.708-06:00  INFO 32712 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Started SistemaContratosApplication in 7.627 seconds (process running for 8.659)
+2024-12-02T10:07:11.169-06:00  INFO 32712 --- [sistemaContratos] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-02T10:07:11.170-06:00  INFO 32712 --- [sistemaContratos] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-02T10:07:11.172-06:00  INFO 32712 --- [sistemaContratos] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-12-02T10:07:12.680-06:00 ERROR 32712 --- [sistemaContratos] [http-nio-8080-exec-2] m.e.u.s.utils.CorreoSender               : No se pudo enviar el correo
+2024-12-02T10:09:56.739-06:00  INFO 32712 --- [sistemaContratos] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T10:09:56.743-06:00  INFO 32712 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-02T10:09:56.755-06:00  INFO 32712 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-02T10:10:04.413-06:00  INFO 16392 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Starting SistemaContratosApplication using Java 21.0.3 with PID 16392 (E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos\target\classes started by rocit in E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos)
+2024-12-02T10:10:04.417-06:00  INFO 16392 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-12-02T10:10:05.467-06:00  INFO 16392 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-02T10:10:05.576-06:00  INFO 16392 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97 ms. Found 5 JPA repository interfaces.
+2024-12-02T10:10:06.384-06:00  INFO 16392 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-02T10:10:06.407-06:00  INFO 16392 --- [sistemaContratos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-02T10:10:06.407-06:00  INFO 16392 --- [sistemaContratos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-12-02T10:10:06.505-06:00  INFO 16392 --- [sistemaContratos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-02T10:10:06.505-06:00  INFO 16392 --- [sistemaContratos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2021 ms
+2024-12-02T10:10:06.750-06:00  INFO 16392 --- [sistemaContratos] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-02T10:10:06.832-06:00  INFO 16392 --- [sistemaContratos] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-12-02T10:10:06.886-06:00  INFO 16392 --- [sistemaContratos] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-02T10:10:07.371-06:00  INFO 16392 --- [sistemaContratos] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-02T10:10:07.419-06:00  INFO 16392 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-02T10:10:07.942-06:00  INFO 16392 --- [sistemaContratos] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2d5ae78e
+2024-12-02T10:10:07.945-06:00  INFO 16392 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-02T10:10:08.029-06:00  WARN 16392 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-02T10:10:08.032-06:00  WARN 16392 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-12-02T10:10:09.299-06:00  INFO 16392 --- [sistemaContratos] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: mx.edu.utez.sistemaContratos.usuario.model.Usuario (class must be instantiated by Interceptor)
+2024-12-02T10:10:09.712-06:00  INFO 16392 --- [sistemaContratos] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-02T10:10:10.098-06:00  INFO 16392 --- [sistemaContratos] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T10:10:10.712-06:00  WARN 16392 --- [sistemaContratos] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-02T10:10:11.337-06:00  INFO 16392 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-12-02T10:10:11.352-06:00  INFO 16392 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Started SistemaContratosApplication in 7.602 seconds (process running for 8.76)
+2024-12-02T10:10:17.867-06:00  INFO 16392 --- [sistemaContratos] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-02T10:10:17.867-06:00  INFO 16392 --- [sistemaContratos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-02T10:10:17.869-06:00  INFO 16392 --- [sistemaContratos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-12-02T10:10:19.444-06:00 ERROR 16392 --- [sistemaContratos] [http-nio-8080-exec-1] m.e.u.s.utils.CorreoSender               : No se pudo enviar el correo
+2024-12-02T10:10:42.452-06:00  INFO 16392 --- [sistemaContratos] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T10:10:42.457-06:00  INFO 16392 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-02T10:10:42.477-06:00  INFO 16392 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-02T10:10:49.172-06:00  INFO 16984 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Starting SistemaContratosApplication using Java 21.0.3 with PID 16984 (E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos\target\classes started by rocit in E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos)
+2024-12-02T10:10:49.175-06:00  INFO 16984 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-12-02T10:10:50.280-06:00  INFO 16984 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-02T10:10:50.395-06:00  INFO 16984 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 103 ms. Found 5 JPA repository interfaces.
+2024-12-02T10:10:51.286-06:00  INFO 16984 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-02T10:10:51.315-06:00  INFO 16984 --- [sistemaContratos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-02T10:10:51.316-06:00  INFO 16984 --- [sistemaContratos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-12-02T10:10:51.412-06:00  INFO 16984 --- [sistemaContratos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-02T10:10:51.413-06:00  INFO 16984 --- [sistemaContratos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2167 ms
+2024-12-02T10:10:51.676-06:00  INFO 16984 --- [sistemaContratos] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-02T10:10:51.784-06:00  INFO 16984 --- [sistemaContratos] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-12-02T10:10:51.831-06:00  INFO 16984 --- [sistemaContratos] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-02T10:10:52.376-06:00  INFO 16984 --- [sistemaContratos] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-02T10:10:52.420-06:00  INFO 16984 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-02T10:10:52.971-06:00  INFO 16984 --- [sistemaContratos] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@34e990cc
+2024-12-02T10:10:52.975-06:00  INFO 16984 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-02T10:10:53.052-06:00  WARN 16984 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-02T10:10:53.054-06:00  WARN 16984 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-12-02T10:10:54.468-06:00  INFO 16984 --- [sistemaContratos] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: mx.edu.utez.sistemaContratos.usuario.model.Usuario (class must be instantiated by Interceptor)
+2024-12-02T10:10:54.881-06:00  INFO 16984 --- [sistemaContratos] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-02T10:10:55.286-06:00  INFO 16984 --- [sistemaContratos] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T10:10:55.927-06:00  WARN 16984 --- [sistemaContratos] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-02T10:10:56.597-06:00  INFO 16984 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-12-02T10:10:56.611-06:00  INFO 16984 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Started SistemaContratosApplication in 8.122 seconds (process running for 9.183)
+2024-12-02T10:10:59.094-06:00  INFO 16984 --- [sistemaContratos] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-02T10:10:59.095-06:00  INFO 16984 --- [sistemaContratos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-02T10:10:59.097-06:00  INFO 16984 --- [sistemaContratos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-12-02T10:10:59.429-06:00 ERROR 16984 --- [sistemaContratos] [http-nio-8080-exec-1] m.e.u.s.utils.CorreoSender               : No se pudo enviar el correo
+2024-12-02T10:12:46.500-06:00  INFO 16984 --- [sistemaContratos] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T10:12:46.505-06:00  INFO 16984 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-02T10:12:46.529-06:00  INFO 16984 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-02T10:12:53.253-06:00  INFO 14400 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Starting SistemaContratosApplication using Java 21.0.3 with PID 14400 (E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos\target\classes started by rocit in E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos)
+2024-12-02T10:12:53.256-06:00  INFO 14400 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-12-02T10:12:54.293-06:00  INFO 14400 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-02T10:12:54.400-06:00  INFO 14400 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 96 ms. Found 5 JPA repository interfaces.
+2024-12-02T10:12:55.238-06:00  INFO 14400 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-02T10:12:55.264-06:00  INFO 14400 --- [sistemaContratos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-02T10:12:55.264-06:00  INFO 14400 --- [sistemaContratos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-12-02T10:12:55.357-06:00  INFO 14400 --- [sistemaContratos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-02T10:12:55.358-06:00  INFO 14400 --- [sistemaContratos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2027 ms
+2024-12-02T10:12:55.606-06:00  INFO 14400 --- [sistemaContratos] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-02T10:12:55.687-06:00  INFO 14400 --- [sistemaContratos] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-12-02T10:12:55.736-06:00  INFO 14400 --- [sistemaContratos] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-02T10:12:56.203-06:00  INFO 14400 --- [sistemaContratos] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-02T10:12:56.248-06:00  INFO 14400 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-02T10:12:56.801-06:00  INFO 14400 --- [sistemaContratos] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1a5b7394
+2024-12-02T10:12:56.805-06:00  INFO 14400 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-02T10:12:56.878-06:00  WARN 14400 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-02T10:12:56.880-06:00  WARN 14400 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-12-02T10:12:58.238-06:00  INFO 14400 --- [sistemaContratos] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: mx.edu.utez.sistemaContratos.usuario.model.Usuario (class must be instantiated by Interceptor)
+2024-12-02T10:12:58.619-06:00  INFO 14400 --- [sistemaContratos] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-02T10:12:59.034-06:00  INFO 14400 --- [sistemaContratos] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T10:12:59.731-06:00  WARN 14400 --- [sistemaContratos] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-02T10:13:00.409-06:00  INFO 14400 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-12-02T10:13:00.423-06:00  INFO 14400 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Started SistemaContratosApplication in 7.851 seconds (process running for 8.941)
+2024-12-02T10:13:05.150-06:00  INFO 14400 --- [sistemaContratos] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-02T10:13:05.150-06:00  INFO 14400 --- [sistemaContratos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-02T10:13:05.152-06:00  INFO 14400 --- [sistemaContratos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-12-02T10:13:05.425-06:00 ERROR 14400 --- [sistemaContratos] [http-nio-8080-exec-1] m.e.u.s.utils.CorreoSender               : No se pudo enviar el correo
+2024-12-02T10:13:54.283-06:00  INFO 14400 --- [sistemaContratos] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T10:13:54.283-06:00  INFO 14400 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-02T10:13:54.298-06:00  INFO 14400 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-02T10:14:01.505-06:00  INFO 29416 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Starting SistemaContratosApplication using Java 21.0.3 with PID 29416 (E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos\target\classes started by rocit in E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos)
+2024-12-02T10:14:01.509-06:00  INFO 29416 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-12-02T10:14:02.542-06:00  INFO 29416 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-02T10:14:02.655-06:00  INFO 29416 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 102 ms. Found 5 JPA repository interfaces.
+2024-12-02T10:14:03.495-06:00  INFO 29416 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-02T10:14:03.523-06:00  INFO 29416 --- [sistemaContratos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-02T10:14:03.525-06:00  INFO 29416 --- [sistemaContratos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-12-02T10:14:03.622-06:00  INFO 29416 --- [sistemaContratos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-02T10:14:03.623-06:00  INFO 29416 --- [sistemaContratos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2042 ms
+2024-12-02T10:14:03.914-06:00  INFO 29416 --- [sistemaContratos] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-02T10:14:04.010-06:00  INFO 29416 --- [sistemaContratos] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-12-02T10:14:04.065-06:00  INFO 29416 --- [sistemaContratos] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-02T10:14:04.594-06:00  INFO 29416 --- [sistemaContratos] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-02T10:14:04.639-06:00  INFO 29416 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-02T10:14:05.244-06:00  INFO 29416 --- [sistemaContratos] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@393ae7a0
+2024-12-02T10:14:05.248-06:00  INFO 29416 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-02T10:14:05.320-06:00  WARN 29416 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-02T10:14:05.322-06:00  WARN 29416 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-12-02T10:14:06.769-06:00  INFO 29416 --- [sistemaContratos] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: mx.edu.utez.sistemaContratos.usuario.model.Usuario (class must be instantiated by Interceptor)
+2024-12-02T10:14:07.246-06:00  INFO 29416 --- [sistemaContratos] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-02T10:14:07.676-06:00  INFO 29416 --- [sistemaContratos] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T10:14:08.331-06:00  WARN 29416 --- [sistemaContratos] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-02T10:14:09.014-06:00  INFO 29416 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-12-02T10:14:09.028-06:00  INFO 29416 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Started SistemaContratosApplication in 8.2 seconds (process running for 9.25)
+2024-12-02T10:14:13.427-06:00  INFO 29416 --- [sistemaContratos] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-02T10:14:13.428-06:00  INFO 29416 --- [sistemaContratos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-02T10:14:13.429-06:00  INFO 29416 --- [sistemaContratos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-12-02T10:14:13.696-06:00 ERROR 29416 --- [sistemaContratos] [http-nio-8080-exec-1] m.e.u.s.utils.CorreoSender               : No se pudo enviar el correo
+2024-12-02T10:14:23.765-06:00  INFO 29416 --- [sistemaContratos] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T10:14:23.770-06:00  INFO 29416 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-02T10:14:23.788-06:00  INFO 29416 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-02T10:14:30.337-06:00  INFO 7032 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Starting SistemaContratosApplication using Java 21.0.3 with PID 7032 (E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos\target\classes started by rocit in E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos)
+2024-12-02T10:14:30.340-06:00  INFO 7032 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-12-02T10:14:31.384-06:00  INFO 7032 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-02T10:14:31.494-06:00  INFO 7032 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 98 ms. Found 5 JPA repository interfaces.
+2024-12-02T10:14:32.326-06:00  INFO 7032 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-02T10:14:32.351-06:00  INFO 7032 --- [sistemaContratos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-02T10:14:32.409-06:00  INFO 7032 --- [sistemaContratos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-12-02T10:14:32.504-06:00  INFO 7032 --- [sistemaContratos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-02T10:14:32.505-06:00  INFO 7032 --- [sistemaContratos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2090 ms
+2024-12-02T10:14:32.769-06:00  INFO 7032 --- [sistemaContratos] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-02T10:14:32.856-06:00  INFO 7032 --- [sistemaContratos] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-12-02T10:14:32.906-06:00  INFO 7032 --- [sistemaContratos] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-02T10:14:33.416-06:00  INFO 7032 --- [sistemaContratos] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-02T10:14:33.459-06:00  INFO 7032 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-02T10:14:33.986-06:00  INFO 7032 --- [sistemaContratos] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1a5b7394
+2024-12-02T10:14:33.990-06:00  INFO 7032 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-02T10:14:34.070-06:00  WARN 7032 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-02T10:14:34.072-06:00  WARN 7032 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-12-02T10:14:35.350-06:00  INFO 7032 --- [sistemaContratos] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: mx.edu.utez.sistemaContratos.usuario.model.Usuario (class must be instantiated by Interceptor)
+2024-12-02T10:14:35.802-06:00  INFO 7032 --- [sistemaContratos] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-02T10:14:36.202-06:00  INFO 7032 --- [sistemaContratos] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T10:14:36.891-06:00  WARN 7032 --- [sistemaContratos] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-02T10:14:37.547-06:00  INFO 7032 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-12-02T10:14:37.560-06:00  INFO 7032 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Started SistemaContratosApplication in 7.914 seconds (process running for 8.967)
+2024-12-02T10:14:40.801-06:00  INFO 7032 --- [sistemaContratos] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-02T10:14:40.801-06:00  INFO 7032 --- [sistemaContratos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-02T10:14:40.804-06:00  INFO 7032 --- [sistemaContratos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-12-02T10:14:42.290-06:00 ERROR 7032 --- [sistemaContratos] [http-nio-8080-exec-1] m.e.u.s.utils.CorreoSender               : No se pudo enviar el correo
+2024-12-02T10:16:52.415-06:00  INFO 7032 --- [sistemaContratos] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T10:16:52.418-06:00  INFO 7032 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-02T10:16:52.454-06:00  INFO 7032 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-02T10:16:58.853-06:00  INFO 29144 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Starting SistemaContratosApplication using Java 21.0.3 with PID 29144 (E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos\target\classes started by rocit in E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos)
+2024-12-02T10:16:58.857-06:00  INFO 29144 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-12-02T10:16:59.912-06:00  INFO 29144 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-02T10:17:00.022-06:00  INFO 29144 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 99 ms. Found 5 JPA repository interfaces.
+2024-12-02T10:17:00.884-06:00  INFO 29144 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-02T10:17:00.908-06:00  INFO 29144 --- [sistemaContratos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-02T10:17:00.910-06:00  INFO 29144 --- [sistemaContratos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-12-02T10:17:00.999-06:00  INFO 29144 --- [sistemaContratos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-02T10:17:01.000-06:00  INFO 29144 --- [sistemaContratos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2071 ms
+2024-12-02T10:17:01.245-06:00  INFO 29144 --- [sistemaContratos] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-02T10:17:01.325-06:00  INFO 29144 --- [sistemaContratos] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-12-02T10:17:01.375-06:00  INFO 29144 --- [sistemaContratos] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-02T10:17:01.830-06:00  INFO 29144 --- [sistemaContratos] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-02T10:17:01.874-06:00  INFO 29144 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-02T10:17:02.435-06:00  INFO 29144 --- [sistemaContratos] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3982206a
+2024-12-02T10:17:02.438-06:00  INFO 29144 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-02T10:17:02.514-06:00  WARN 29144 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-02T10:17:02.516-06:00  WARN 29144 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-12-02T10:17:03.806-06:00  INFO 29144 --- [sistemaContratos] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: mx.edu.utez.sistemaContratos.usuario.model.Usuario (class must be instantiated by Interceptor)
+2024-12-02T10:17:04.188-06:00  INFO 29144 --- [sistemaContratos] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-02T10:17:04.587-06:00  INFO 29144 --- [sistemaContratos] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T10:17:05.216-06:00  WARN 29144 --- [sistemaContratos] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-02T10:17:05.849-06:00  INFO 29144 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-12-02T10:17:05.864-06:00  INFO 29144 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Started SistemaContratosApplication in 7.697 seconds (process running for 8.752)
+2024-12-02T10:17:14.119-06:00  INFO 29144 --- [sistemaContratos] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-02T10:17:14.120-06:00  INFO 29144 --- [sistemaContratos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-02T10:17:14.123-06:00  INFO 29144 --- [sistemaContratos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-12-02T10:17:15.609-06:00 ERROR 29144 --- [sistemaContratos] [http-nio-8080-exec-1] m.e.u.s.utils.CorreoSender               : No se pudo enviar el correo
+2024-12-02T10:18:42.092-06:00  INFO 29144 --- [sistemaContratos] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T10:18:42.095-06:00  INFO 29144 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-02T10:18:42.113-06:00  INFO 29144 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-02T10:18:46.258-06:00  INFO 15232 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Starting SistemaContratosApplication using Java 21.0.3 with PID 15232 (E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos\target\classes started by rocit in E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos)
+2024-12-02T10:18:46.261-06:00  INFO 15232 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-12-02T10:18:47.288-06:00  INFO 15232 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-02T10:18:47.399-06:00  INFO 15232 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 99 ms. Found 5 JPA repository interfaces.
+2024-12-02T10:18:48.212-06:00  INFO 15232 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-02T10:18:48.234-06:00  INFO 15232 --- [sistemaContratos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-02T10:18:48.234-06:00  INFO 15232 --- [sistemaContratos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-12-02T10:18:48.352-06:00  INFO 15232 --- [sistemaContratos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-02T10:18:48.353-06:00  INFO 15232 --- [sistemaContratos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2012 ms
+2024-12-02T10:18:48.600-06:00  INFO 15232 --- [sistemaContratos] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-02T10:18:48.681-06:00  INFO 15232 --- [sistemaContratos] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-12-02T10:18:48.729-06:00  INFO 15232 --- [sistemaContratos] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-02T10:18:49.232-06:00  INFO 15232 --- [sistemaContratos] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-02T10:18:49.282-06:00  INFO 15232 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-02T10:18:49.822-06:00  INFO 15232 --- [sistemaContratos] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6141647f
+2024-12-02T10:18:49.825-06:00  INFO 15232 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-02T10:18:49.904-06:00  WARN 15232 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-02T10:18:49.906-06:00  WARN 15232 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-12-02T10:18:51.206-06:00  INFO 15232 --- [sistemaContratos] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: mx.edu.utez.sistemaContratos.usuario.model.Usuario (class must be instantiated by Interceptor)
+2024-12-02T10:18:51.599-06:00  INFO 15232 --- [sistemaContratos] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-02T10:18:52.018-06:00  INFO 15232 --- [sistemaContratos] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T10:18:52.687-06:00  WARN 15232 --- [sistemaContratos] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-02T10:18:53.336-06:00  INFO 15232 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-12-02T10:18:53.349-06:00  INFO 15232 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Started SistemaContratosApplication in 7.81 seconds (process running for 8.97)
+2024-12-02T10:19:04.798-06:00  INFO 15232 --- [sistemaContratos] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-02T10:19:04.798-06:00  INFO 15232 --- [sistemaContratos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-02T10:19:04.801-06:00  INFO 15232 --- [sistemaContratos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-12-02T10:19:06.330-06:00 ERROR 15232 --- [sistemaContratos] [http-nio-8080-exec-1] m.e.u.s.utils.CorreoSender               : No se pudo enviar el correo
+2024-12-02T10:20:02.637-06:00  INFO 15232 --- [sistemaContratos] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T10:20:02.641-06:00  INFO 15232 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-02T10:20:02.650-06:00  INFO 15232 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-02T10:20:06.409-06:00  INFO 10304 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Starting SistemaContratosApplication using Java 21.0.3 with PID 10304 (E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos\target\classes started by rocit in E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos)
+2024-12-02T10:20:06.413-06:00  INFO 10304 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-12-02T10:20:07.441-06:00  INFO 10304 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-02T10:20:07.551-06:00  INFO 10304 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 98 ms. Found 5 JPA repository interfaces.
+2024-12-02T10:20:08.376-06:00  INFO 10304 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-02T10:20:08.399-06:00  INFO 10304 --- [sistemaContratos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-02T10:20:08.400-06:00  INFO 10304 --- [sistemaContratos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-12-02T10:20:08.492-06:00  INFO 10304 --- [sistemaContratos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-02T10:20:08.492-06:00  INFO 10304 --- [sistemaContratos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2003 ms
+2024-12-02T10:20:08.745-06:00  INFO 10304 --- [sistemaContratos] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-02T10:20:08.824-06:00  INFO 10304 --- [sistemaContratos] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-12-02T10:20:08.874-06:00  INFO 10304 --- [sistemaContratos] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-02T10:20:09.328-06:00  INFO 10304 --- [sistemaContratos] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-02T10:20:09.371-06:00  INFO 10304 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-02T10:20:09.953-06:00  INFO 10304 --- [sistemaContratos] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@70543cae
+2024-12-02T10:20:09.956-06:00  INFO 10304 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-02T10:20:10.031-06:00  WARN 10304 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-02T10:20:10.033-06:00  WARN 10304 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-12-02T10:20:11.317-06:00  INFO 10304 --- [sistemaContratos] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: mx.edu.utez.sistemaContratos.usuario.model.Usuario (class must be instantiated by Interceptor)
+2024-12-02T10:20:11.691-06:00  INFO 10304 --- [sistemaContratos] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-02T10:20:12.114-06:00  INFO 10304 --- [sistemaContratos] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T10:20:12.745-06:00  WARN 10304 --- [sistemaContratos] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-02T10:20:13.405-06:00  INFO 10304 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-12-02T10:20:13.420-06:00  INFO 10304 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Started SistemaContratosApplication in 7.688 seconds (process running for 8.718)
+2024-12-02T10:20:20.104-06:00  INFO 10304 --- [sistemaContratos] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-02T10:20:20.104-06:00  INFO 10304 --- [sistemaContratos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-02T10:20:20.107-06:00  INFO 10304 --- [sistemaContratos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-12-02T10:20:22.138-06:00 ERROR 10304 --- [sistemaContratos] [http-nio-8080-exec-1] m.e.u.s.utils.CorreoSender               : No se pudo enviar el correo
+2024-12-02T10:26:29.181-06:00  INFO 10304 --- [sistemaContratos] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T10:26:29.185-06:00  INFO 10304 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-02T10:26:29.231-06:00  INFO 10304 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-02T10:26:38.922-06:00  INFO 14208 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Starting SistemaContratosApplication using Java 21.0.3 with PID 14208 (E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos\target\classes started by rocit in E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos)
+2024-12-02T10:26:38.925-06:00  INFO 14208 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-12-02T10:26:39.942-06:00  INFO 14208 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-02T10:26:40.048-06:00  INFO 14208 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 95 ms. Found 5 JPA repository interfaces.
+2024-12-02T10:26:40.825-06:00  INFO 14208 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-02T10:26:40.848-06:00  INFO 14208 --- [sistemaContratos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-02T10:26:40.848-06:00  INFO 14208 --- [sistemaContratos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-12-02T10:26:40.944-06:00  INFO 14208 --- [sistemaContratos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-02T10:26:40.945-06:00  INFO 14208 --- [sistemaContratos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1945 ms
+2024-12-02T10:26:41.185-06:00  INFO 14208 --- [sistemaContratos] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-02T10:26:41.265-06:00  INFO 14208 --- [sistemaContratos] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-12-02T10:26:41.316-06:00  INFO 14208 --- [sistemaContratos] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-02T10:26:41.801-06:00  INFO 14208 --- [sistemaContratos] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-02T10:26:41.846-06:00  INFO 14208 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-02T10:26:42.377-06:00  INFO 14208 --- [sistemaContratos] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1a5b7394
+2024-12-02T10:26:42.381-06:00  INFO 14208 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-02T10:26:42.460-06:00  WARN 14208 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-02T10:26:42.462-06:00  WARN 14208 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-12-02T10:26:43.734-06:00  INFO 14208 --- [sistemaContratos] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: mx.edu.utez.sistemaContratos.usuario.model.Usuario (class must be instantiated by Interceptor)
+2024-12-02T10:26:44.146-06:00  INFO 14208 --- [sistemaContratos] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-02T10:26:44.540-06:00  INFO 14208 --- [sistemaContratos] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T10:26:45.168-06:00  WARN 14208 --- [sistemaContratos] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-02T10:26:45.827-06:00  INFO 14208 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-12-02T10:26:45.843-06:00  INFO 14208 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Started SistemaContratosApplication in 7.614 seconds (process running for 8.677)
+2024-12-02T10:26:52.136-06:00  INFO 14208 --- [sistemaContratos] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-02T10:26:52.137-06:00  INFO 14208 --- [sistemaContratos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-02T10:26:52.138-06:00  INFO 14208 --- [sistemaContratos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-12-02T10:26:53.780-06:00 ERROR 14208 --- [sistemaContratos] [http-nio-8080-exec-1] m.e.u.s.utils.EmailSender                : No se pudo enviar el correo
+2024-12-02T10:27:04.640-06:00  INFO 14208 --- [sistemaContratos] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T10:27:04.647-06:00  INFO 14208 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-02T10:27:04.691-06:00  INFO 14208 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-02T10:27:11.431-06:00  INFO 31288 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Starting SistemaContratosApplication using Java 21.0.3 with PID 31288 (E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos\target\classes started by rocit in E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos)
+2024-12-02T10:27:11.435-06:00  INFO 31288 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-12-02T10:27:12.526-06:00  INFO 31288 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-02T10:27:12.635-06:00  INFO 31288 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97 ms. Found 5 JPA repository interfaces.
+2024-12-02T10:27:13.500-06:00  INFO 31288 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-02T10:27:13.524-06:00  INFO 31288 --- [sistemaContratos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-02T10:27:13.525-06:00  INFO 31288 --- [sistemaContratos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-12-02T10:27:13.629-06:00  INFO 31288 --- [sistemaContratos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-02T10:27:13.629-06:00  INFO 31288 --- [sistemaContratos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2122 ms
+2024-12-02T10:27:13.882-06:00  INFO 31288 --- [sistemaContratos] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-02T10:27:13.979-06:00  INFO 31288 --- [sistemaContratos] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-12-02T10:27:14.047-06:00  INFO 31288 --- [sistemaContratos] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-02T10:27:14.552-06:00  INFO 31288 --- [sistemaContratos] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-02T10:27:14.607-06:00  INFO 31288 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-02T10:27:15.164-06:00  INFO 31288 --- [sistemaContratos] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@350567f1
+2024-12-02T10:27:15.168-06:00  INFO 31288 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-02T10:27:15.239-06:00  WARN 31288 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-02T10:27:15.241-06:00  WARN 31288 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-12-02T10:27:16.635-06:00  INFO 31288 --- [sistemaContratos] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: mx.edu.utez.sistemaContratos.usuario.model.Usuario (class must be instantiated by Interceptor)
+2024-12-02T10:27:17.112-06:00  INFO 31288 --- [sistemaContratos] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-02T10:27:17.553-06:00  INFO 31288 --- [sistemaContratos] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T10:27:18.236-06:00  WARN 31288 --- [sistemaContratos] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-02T10:27:18.945-06:00  INFO 31288 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-12-02T10:27:18.961-06:00  INFO 31288 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Started SistemaContratosApplication in 8.227 seconds (process running for 9.326)
+2024-12-02T10:27:23.220-06:00  INFO 31288 --- [sistemaContratos] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-02T10:27:23.221-06:00  INFO 31288 --- [sistemaContratos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-02T10:27:23.223-06:00  INFO 31288 --- [sistemaContratos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-12-02T10:27:24.747-06:00 ERROR 31288 --- [sistemaContratos] [http-nio-8080-exec-1] m.e.u.s.utils.EmailSender                : No se pudo enviar el correo
+2024-12-02T10:28:25.405-06:00  INFO 31288 --- [sistemaContratos] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T10:28:25.410-06:00  INFO 31288 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-02T10:28:25.421-06:00  INFO 31288 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-02T10:28:29.565-06:00  INFO 25332 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Starting SistemaContratosApplication using Java 21.0.3 with PID 25332 (E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos\target\classes started by rocit in E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos)
+2024-12-02T10:28:29.568-06:00  INFO 25332 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-12-02T10:28:30.633-06:00  INFO 25332 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-02T10:28:30.745-06:00  INFO 25332 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 100 ms. Found 5 JPA repository interfaces.
+2024-12-02T10:28:31.555-06:00  INFO 25332 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-02T10:28:31.578-06:00  INFO 25332 --- [sistemaContratos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-02T10:28:31.579-06:00  INFO 25332 --- [sistemaContratos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-12-02T10:28:31.671-06:00  INFO 25332 --- [sistemaContratos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-02T10:28:31.672-06:00  INFO 25332 --- [sistemaContratos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2028 ms
+2024-12-02T10:28:31.933-06:00  INFO 25332 --- [sistemaContratos] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-02T10:28:32.019-06:00  INFO 25332 --- [sistemaContratos] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-12-02T10:28:32.070-06:00  INFO 25332 --- [sistemaContratos] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-02T10:28:32.589-06:00  INFO 25332 --- [sistemaContratos] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-02T10:28:32.635-06:00  INFO 25332 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-02T10:28:33.168-06:00  INFO 25332 --- [sistemaContratos] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@70543cae
+2024-12-02T10:28:33.171-06:00  INFO 25332 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-02T10:28:33.245-06:00  WARN 25332 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-02T10:28:33.246-06:00  WARN 25332 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-12-02T10:28:34.547-06:00  INFO 25332 --- [sistemaContratos] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: mx.edu.utez.sistemaContratos.usuario.model.Usuario (class must be instantiated by Interceptor)
+2024-12-02T10:28:34.966-06:00  INFO 25332 --- [sistemaContratos] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-02T10:28:35.363-06:00  INFO 25332 --- [sistemaContratos] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T10:28:36.028-06:00  WARN 25332 --- [sistemaContratos] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-02T10:28:36.710-06:00  INFO 25332 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-12-02T10:28:36.723-06:00  INFO 25332 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Started SistemaContratosApplication in 7.876 seconds (process running for 8.992)
+2024-12-02T10:28:41.305-06:00  INFO 25332 --- [sistemaContratos] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-02T10:28:41.306-06:00  INFO 25332 --- [sistemaContratos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-02T10:28:41.307-06:00  INFO 25332 --- [sistemaContratos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-12-02T10:28:42.708-06:00 ERROR 25332 --- [sistemaContratos] [http-nio-8080-exec-1] m.e.u.s.utils.EmailSender                : No se pudo enviar el correo
+2024-12-02T10:29:18.089-06:00  INFO 25332 --- [sistemaContratos] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T10:29:18.093-06:00  INFO 25332 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-02T10:29:18.120-06:00  INFO 25332 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-02T10:29:25.501-06:00  INFO 31252 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Starting SistemaContratosApplication using Java 21.0.3 with PID 31252 (E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos\target\classes started by rocit in E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos)
+2024-12-02T10:29:25.505-06:00  INFO 31252 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-12-02T10:29:26.532-06:00  INFO 31252 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-02T10:29:26.648-06:00  INFO 31252 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 104 ms. Found 5 JPA repository interfaces.
+2024-12-02T10:29:27.473-06:00  INFO 31252 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-02T10:29:27.496-06:00  INFO 31252 --- [sistemaContratos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-02T10:29:27.497-06:00  INFO 31252 --- [sistemaContratos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-12-02T10:29:27.594-06:00  INFO 31252 --- [sistemaContratos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-02T10:29:27.594-06:00  INFO 31252 --- [sistemaContratos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2014 ms
+2024-12-02T10:29:27.853-06:00  INFO 31252 --- [sistemaContratos] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-02T10:29:27.945-06:00  INFO 31252 --- [sistemaContratos] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-12-02T10:29:28.010-06:00  INFO 31252 --- [sistemaContratos] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-02T10:29:28.579-06:00  INFO 31252 --- [sistemaContratos] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-02T10:29:28.639-06:00  INFO 31252 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-02T10:29:29.234-06:00  INFO 31252 --- [sistemaContratos] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7ee12d58
+2024-12-02T10:29:29.239-06:00  INFO 31252 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-02T10:29:29.326-06:00  WARN 31252 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-02T10:29:29.329-06:00  WARN 31252 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-12-02T10:29:30.805-06:00  INFO 31252 --- [sistemaContratos] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: mx.edu.utez.sistemaContratos.usuario.model.Usuario (class must be instantiated by Interceptor)
+2024-12-02T10:29:31.287-06:00  INFO 31252 --- [sistemaContratos] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-02T10:29:31.721-06:00  INFO 31252 --- [sistemaContratos] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T10:29:32.392-06:00  WARN 31252 --- [sistemaContratos] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-02T10:29:33.068-06:00  INFO 31252 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-12-02T10:29:33.082-06:00  INFO 31252 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Started SistemaContratosApplication in 8.286 seconds (process running for 9.346)
+2024-12-02T10:29:37.486-06:00  INFO 31252 --- [sistemaContratos] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-02T10:29:37.486-06:00  INFO 31252 --- [sistemaContratos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-02T10:29:37.487-06:00  INFO 31252 --- [sistemaContratos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-12-02T10:29:38.862-06:00 ERROR 31252 --- [sistemaContratos] [http-nio-8080-exec-1] m.e.u.s.utils.EmailSender                : No se pudo enviar el correo
+2024-12-02T10:30:05.419-06:00  INFO 31252 --- [sistemaContratos] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T10:30:05.422-06:00  INFO 31252 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-02T10:30:05.464-06:00  INFO 31252 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-02T10:30:12.228-06:00  INFO 31708 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Starting SistemaContratosApplication using Java 21.0.3 with PID 31708 (E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos\target\classes started by rocit in E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos)
+2024-12-02T10:30:12.232-06:00  INFO 31708 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-12-02T10:30:13.276-06:00  INFO 31708 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-02T10:30:13.387-06:00  INFO 31708 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 101 ms. Found 5 JPA repository interfaces.
+2024-12-02T10:30:14.176-06:00  INFO 31708 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-02T10:30:14.200-06:00  INFO 31708 --- [sistemaContratos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-02T10:30:14.200-06:00  INFO 31708 --- [sistemaContratos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-12-02T10:30:14.296-06:00  INFO 31708 --- [sistemaContratos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-02T10:30:14.296-06:00  INFO 31708 --- [sistemaContratos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1993 ms
+2024-12-02T10:30:14.543-06:00  INFO 31708 --- [sistemaContratos] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-02T10:30:14.622-06:00  INFO 31708 --- [sistemaContratos] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-12-02T10:30:14.670-06:00  INFO 31708 --- [sistemaContratos] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-02T10:30:15.141-06:00  INFO 31708 --- [sistemaContratos] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-02T10:30:15.183-06:00  INFO 31708 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-02T10:30:15.709-06:00  INFO 31708 --- [sistemaContratos] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@63326a3a
+2024-12-02T10:30:15.712-06:00  INFO 31708 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-02T10:30:15.786-06:00  WARN 31708 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-02T10:30:15.787-06:00  WARN 31708 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-12-02T10:30:17.084-06:00  INFO 31708 --- [sistemaContratos] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: mx.edu.utez.sistemaContratos.usuario.model.Usuario (class must be instantiated by Interceptor)
+2024-12-02T10:30:17.487-06:00  INFO 31708 --- [sistemaContratos] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-02T10:30:17.869-06:00  INFO 31708 --- [sistemaContratos] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T10:30:18.495-06:00  WARN 31708 --- [sistemaContratos] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-02T10:30:19.169-06:00  INFO 31708 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-12-02T10:30:19.182-06:00  INFO 31708 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Started SistemaContratosApplication in 7.679 seconds (process running for 8.741)
+2024-12-02T10:30:22.311-06:00  INFO 31708 --- [sistemaContratos] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-02T10:30:22.311-06:00  INFO 31708 --- [sistemaContratos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-02T10:30:22.314-06:00  INFO 31708 --- [sistemaContratos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-12-02T10:30:23.798-06:00 ERROR 31708 --- [sistemaContratos] [http-nio-8080-exec-1] m.e.u.s.utils.EmailSender                : No se pudo enviar el correo
+2024-12-02T10:30:56.238-06:00  INFO 31708 --- [sistemaContratos] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T10:30:56.242-06:00  INFO 31708 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-02T10:30:56.261-06:00  INFO 31708 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-02T10:31:03.253-06:00  INFO 30396 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Starting SistemaContratosApplication using Java 21.0.3 with PID 30396 (E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos\target\classes started by rocit in E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos)
+2024-12-02T10:31:03.256-06:00  INFO 30396 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-12-02T10:31:04.296-06:00  INFO 30396 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-02T10:31:04.408-06:00  INFO 30396 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 100 ms. Found 5 JPA repository interfaces.
+2024-12-02T10:31:05.239-06:00  INFO 30396 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-02T10:31:05.267-06:00  INFO 30396 --- [sistemaContratos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-02T10:31:05.268-06:00  INFO 30396 --- [sistemaContratos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-12-02T10:31:05.369-06:00  INFO 30396 --- [sistemaContratos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-02T10:31:05.370-06:00  INFO 30396 --- [sistemaContratos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2043 ms
+2024-12-02T10:31:05.621-06:00  INFO 30396 --- [sistemaContratos] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-02T10:31:05.700-06:00  INFO 30396 --- [sistemaContratos] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-12-02T10:31:05.748-06:00  INFO 30396 --- [sistemaContratos] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-02T10:31:06.221-06:00  INFO 30396 --- [sistemaContratos] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-02T10:31:06.281-06:00  INFO 30396 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-02T10:31:06.831-06:00  INFO 30396 --- [sistemaContratos] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1a5b7394
+2024-12-02T10:31:06.834-06:00  INFO 30396 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-02T10:31:06.911-06:00  WARN 30396 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-02T10:31:06.913-06:00  WARN 30396 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-12-02T10:31:08.264-06:00  INFO 30396 --- [sistemaContratos] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: mx.edu.utez.sistemaContratos.usuario.model.Usuario (class must be instantiated by Interceptor)
+2024-12-02T10:31:08.681-06:00  INFO 30396 --- [sistemaContratos] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-02T10:31:09.077-06:00  INFO 30396 --- [sistemaContratos] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T10:31:09.728-06:00  WARN 30396 --- [sistemaContratos] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-02T10:31:10.377-06:00  INFO 30396 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-12-02T10:31:10.392-06:00  INFO 30396 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Started SistemaContratosApplication in 7.824 seconds (process running for 8.887)
+2024-12-02T10:31:17.500-06:00  INFO 30396 --- [sistemaContratos] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-02T10:31:17.500-06:00  INFO 30396 --- [sistemaContratos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-02T10:31:17.502-06:00  INFO 30396 --- [sistemaContratos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-12-02T10:31:18.945-06:00 ERROR 30396 --- [sistemaContratos] [http-nio-8080-exec-1] m.e.u.s.utils.EmailSender                : No se pudo enviar el correo
+2024-12-02T10:31:47.146-06:00  INFO 30396 --- [sistemaContratos] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T10:31:47.156-06:00  INFO 30396 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-02T10:31:47.172-06:00  INFO 30396 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-02T10:31:50.755-06:00  INFO 1728 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Starting SistemaContratosApplication using Java 21.0.3 with PID 1728 (E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos\target\classes started by rocit in E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos)
+2024-12-02T10:31:50.758-06:00  INFO 1728 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-12-02T10:31:51.861-06:00  INFO 1728 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-02T10:31:51.978-06:00  INFO 1728 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 104 ms. Found 5 JPA repository interfaces.
+2024-12-02T10:31:52.854-06:00  INFO 1728 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-02T10:31:52.881-06:00  INFO 1728 --- [sistemaContratos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-02T10:31:52.881-06:00  INFO 1728 --- [sistemaContratos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-12-02T10:31:52.981-06:00  INFO 1728 --- [sistemaContratos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-02T10:31:52.982-06:00  INFO 1728 --- [sistemaContratos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2149 ms
+2024-12-02T10:31:53.240-06:00  INFO 1728 --- [sistemaContratos] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-02T10:31:53.323-06:00  INFO 1728 --- [sistemaContratos] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-12-02T10:31:53.373-06:00  INFO 1728 --- [sistemaContratos] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-02T10:31:53.892-06:00  INFO 1728 --- [sistemaContratos] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-02T10:31:53.940-06:00  INFO 1728 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-02T10:31:54.520-06:00  INFO 1728 --- [sistemaContratos] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4315fe1b
+2024-12-02T10:31:54.523-06:00  INFO 1728 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-02T10:31:54.594-06:00  WARN 1728 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-02T10:31:54.596-06:00  WARN 1728 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-12-02T10:31:55.974-06:00  INFO 1728 --- [sistemaContratos] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: mx.edu.utez.sistemaContratos.usuario.model.Usuario (class must be instantiated by Interceptor)
+2024-12-02T10:31:56.439-06:00  INFO 1728 --- [sistemaContratos] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-02T10:31:56.847-06:00  INFO 1728 --- [sistemaContratos] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T10:31:57.526-06:00  WARN 1728 --- [sistemaContratos] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-02T10:31:58.218-06:00  INFO 1728 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-12-02T10:31:58.233-06:00  INFO 1728 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Started SistemaContratosApplication in 8.177 seconds (process running for 9.244)
+2024-12-02T10:32:04.830-06:00  INFO 1728 --- [sistemaContratos] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-02T10:32:04.831-06:00  INFO 1728 --- [sistemaContratos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-02T10:32:04.832-06:00  INFO 1728 --- [sistemaContratos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-12-02T10:32:05.591-06:00 ERROR 1728 --- [sistemaContratos] [http-nio-8080-exec-1] m.e.u.s.utils.EmailSender                : No se pudo enviar el correo
+2024-12-02T10:32:34.857-06:00  INFO 1728 --- [sistemaContratos] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T10:32:34.862-06:00  INFO 1728 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-02T10:32:34.883-06:00  INFO 1728 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-02T10:32:38.385-06:00  INFO 21432 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Starting SistemaContratosApplication using Java 21.0.3 with PID 21432 (E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos\target\classes started by rocit in E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos)
+2024-12-02T10:32:38.388-06:00  INFO 21432 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-12-02T10:32:39.419-06:00  INFO 21432 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-02T10:32:39.530-06:00  INFO 21432 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 99 ms. Found 5 JPA repository interfaces.
+2024-12-02T10:32:40.345-06:00  INFO 21432 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-02T10:32:40.373-06:00  INFO 21432 --- [sistemaContratos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-02T10:32:40.373-06:00  INFO 21432 --- [sistemaContratos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-12-02T10:32:40.468-06:00  INFO 21432 --- [sistemaContratos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-02T10:32:40.468-06:00  INFO 21432 --- [sistemaContratos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2008 ms
+2024-12-02T10:32:40.725-06:00  INFO 21432 --- [sistemaContratos] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-02T10:32:40.806-06:00  INFO 21432 --- [sistemaContratos] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-12-02T10:32:40.857-06:00  INFO 21432 --- [sistemaContratos] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-02T10:32:41.375-06:00  INFO 21432 --- [sistemaContratos] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-02T10:32:41.424-06:00  INFO 21432 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-02T10:32:41.973-06:00  INFO 21432 --- [sistemaContratos] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@61554b6b
+2024-12-02T10:32:41.976-06:00  INFO 21432 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-02T10:32:42.049-06:00  WARN 21432 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-02T10:32:42.051-06:00  WARN 21432 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-12-02T10:32:43.327-06:00  INFO 21432 --- [sistemaContratos] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: mx.edu.utez.sistemaContratos.usuario.model.Usuario (class must be instantiated by Interceptor)
+2024-12-02T10:32:43.724-06:00  INFO 21432 --- [sistemaContratos] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-02T10:32:44.115-06:00  INFO 21432 --- [sistemaContratos] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T10:32:44.761-06:00  WARN 21432 --- [sistemaContratos] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-02T10:32:45.488-06:00  INFO 21432 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-12-02T10:32:45.504-06:00  INFO 21432 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Started SistemaContratosApplication in 7.803 seconds (process running for 8.881)
+2024-12-02T10:32:54.002-06:00  INFO 21432 --- [sistemaContratos] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-02T10:32:54.002-06:00  INFO 21432 --- [sistemaContratos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-02T10:32:54.005-06:00  INFO 21432 --- [sistemaContratos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-12-02T10:32:54.723-06:00 ERROR 21432 --- [sistemaContratos] [http-nio-8080-exec-1] m.e.u.s.utils.EmailSender                : No se pudo enviar el correo
+2024-12-02T10:33:28.372-06:00  INFO 21432 --- [sistemaContratos] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T10:33:28.376-06:00  INFO 21432 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-02T10:33:28.394-06:00  INFO 21432 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-02T10:33:32.196-06:00  INFO 9296 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Starting SistemaContratosApplication using Java 21.0.3 with PID 9296 (E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos\target\classes started by rocit in E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos)
+2024-12-02T10:33:32.199-06:00  INFO 9296 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-12-02T10:33:33.232-06:00  INFO 9296 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-02T10:33:33.338-06:00  INFO 9296 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 95 ms. Found 5 JPA repository interfaces.
+2024-12-02T10:33:34.132-06:00  INFO 9296 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-02T10:33:34.156-06:00  INFO 9296 --- [sistemaContratos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-02T10:33:34.156-06:00  INFO 9296 --- [sistemaContratos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-12-02T10:33:34.252-06:00  INFO 9296 --- [sistemaContratos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-02T10:33:34.254-06:00  INFO 9296 --- [sistemaContratos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1980 ms
+2024-12-02T10:33:34.498-06:00  INFO 9296 --- [sistemaContratos] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-02T10:33:34.583-06:00  INFO 9296 --- [sistemaContratos] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-12-02T10:33:34.633-06:00  INFO 9296 --- [sistemaContratos] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-02T10:33:35.116-06:00  INFO 9296 --- [sistemaContratos] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-02T10:33:35.160-06:00  INFO 9296 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-02T10:33:35.698-06:00  INFO 9296 --- [sistemaContratos] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1a5b7394
+2024-12-02T10:33:35.702-06:00  INFO 9296 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-02T10:33:35.778-06:00  WARN 9296 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-02T10:33:35.780-06:00  WARN 9296 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-12-02T10:33:37.129-06:00  INFO 9296 --- [sistemaContratos] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: mx.edu.utez.sistemaContratos.usuario.model.Usuario (class must be instantiated by Interceptor)
+2024-12-02T10:33:37.585-06:00  INFO 9296 --- [sistemaContratos] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-02T10:33:37.979-06:00  INFO 9296 --- [sistemaContratos] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T10:33:38.640-06:00  WARN 9296 --- [sistemaContratos] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-02T10:33:39.296-06:00  INFO 9296 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-12-02T10:33:39.309-06:00  INFO 9296 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Started SistemaContratosApplication in 7.816 seconds (process running for 8.9)
+2024-12-02T10:33:41.700-06:00  INFO 9296 --- [sistemaContratos] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-02T10:33:41.700-06:00  INFO 9296 --- [sistemaContratos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-02T10:33:41.702-06:00  INFO 9296 --- [sistemaContratos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-12-02T10:33:43.239-06:00 ERROR 9296 --- [sistemaContratos] [http-nio-8080-exec-1] m.e.u.s.utils.EmailSender                : No se pudo enviar el correo
+2024-12-02T10:34:09.730-06:00  INFO 9296 --- [sistemaContratos] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T10:34:09.736-06:00  INFO 9296 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-02T10:34:09.752-06:00  INFO 9296 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-02T10:34:27.944-06:00  INFO 11260 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Starting SistemaContratosApplication using Java 21.0.3 with PID 11260 (E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos\target\classes started by rocit in E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos)
+2024-12-02T10:34:27.947-06:00  INFO 11260 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-12-02T10:34:29.005-06:00  INFO 11260 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-02T10:34:29.116-06:00  INFO 11260 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 99 ms. Found 5 JPA repository interfaces.
+2024-12-02T10:34:29.958-06:00  INFO 11260 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-02T10:34:29.982-06:00  INFO 11260 --- [sistemaContratos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-02T10:34:29.983-06:00  INFO 11260 --- [sistemaContratos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-12-02T10:34:30.084-06:00  INFO 11260 --- [sistemaContratos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-02T10:34:30.084-06:00  INFO 11260 --- [sistemaContratos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2068 ms
+2024-12-02T10:34:30.345-06:00  INFO 11260 --- [sistemaContratos] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-02T10:34:30.428-06:00  INFO 11260 --- [sistemaContratos] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-12-02T10:34:30.480-06:00  INFO 11260 --- [sistemaContratos] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-02T10:34:30.960-06:00  INFO 11260 --- [sistemaContratos] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-02T10:34:31.005-06:00  INFO 11260 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-02T10:34:31.547-06:00  INFO 11260 --- [sistemaContratos] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@70543cae
+2024-12-02T10:34:31.550-06:00  INFO 11260 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-02T10:34:31.627-06:00  WARN 11260 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-02T10:34:31.629-06:00  WARN 11260 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-12-02T10:34:32.964-06:00  INFO 11260 --- [sistemaContratos] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: mx.edu.utez.sistemaContratos.usuario.model.Usuario (class must be instantiated by Interceptor)
+2024-12-02T10:34:33.370-06:00  INFO 11260 --- [sistemaContratos] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-02T10:34:33.747-06:00  INFO 11260 --- [sistemaContratos] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T10:34:34.412-06:00  WARN 11260 --- [sistemaContratos] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-02T10:34:35.092-06:00  INFO 11260 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-12-02T10:34:35.106-06:00  INFO 11260 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Started SistemaContratosApplication in 7.828 seconds (process running for 9.114)
+2024-12-02T10:35:18.470-06:00  INFO 11260 --- [sistemaContratos] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T10:35:18.476-06:00  INFO 11260 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-02T10:35:18.495-06:00  INFO 11260 --- [sistemaContratos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-02T10:35:27.451-06:00  INFO 26756 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Starting SistemaContratosApplication using Java 21.0.3 with PID 26756 (E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos\target\classes started by rocit in E:\USB\4to Cuatrimestre\Aplicaciones Web\ContraTiks\Sistema-de-Contratos)
+2024-12-02T10:35:27.454-06:00  INFO 26756 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-12-02T10:35:28.526-06:00  INFO 26756 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-02T10:35:28.657-06:00  INFO 26756 --- [sistemaContratos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 118 ms. Found 5 JPA repository interfaces.
+2024-12-02T10:35:29.524-06:00  INFO 26756 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-02T10:35:29.547-06:00  INFO 26756 --- [sistemaContratos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-02T10:35:29.548-06:00  INFO 26756 --- [sistemaContratos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-12-02T10:35:29.647-06:00  INFO 26756 --- [sistemaContratos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-02T10:35:29.648-06:00  INFO 26756 --- [sistemaContratos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2122 ms
+2024-12-02T10:35:29.935-06:00  INFO 26756 --- [sistemaContratos] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-02T10:35:30.018-06:00  INFO 26756 --- [sistemaContratos] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-12-02T10:35:30.068-06:00  INFO 26756 --- [sistemaContratos] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-02T10:35:30.586-06:00  INFO 26756 --- [sistemaContratos] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-02T10:35:30.641-06:00  INFO 26756 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-02T10:35:31.185-06:00  INFO 26756 --- [sistemaContratos] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@393ae7a0
+2024-12-02T10:35:31.189-06:00  INFO 26756 --- [sistemaContratos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-02T10:35:31.274-06:00  WARN 26756 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-02T10:35:31.276-06:00  WARN 26756 --- [sistemaContratos] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-12-02T10:35:32.628-06:00  INFO 26756 --- [sistemaContratos] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: mx.edu.utez.sistemaContratos.usuario.model.Usuario (class must be instantiated by Interceptor)
+2024-12-02T10:35:33.014-06:00  INFO 26756 --- [sistemaContratos] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-02T10:35:33.453-06:00  INFO 26756 --- [sistemaContratos] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T10:35:34.151-06:00  WARN 26756 --- [sistemaContratos] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-02T10:35:34.846-06:00  INFO 26756 --- [sistemaContratos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-12-02T10:35:34.862-06:00  INFO 26756 --- [sistemaContratos] [main] m.e.u.s.SistemaContratosApplication      : Started SistemaContratosApplication in 8.137 seconds (process running for 9.289)
+2024-12-02T10:35:39.648-06:00  INFO 26756 --- [sistemaContratos] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-02T10:35:39.649-06:00  INFO 26756 --- [sistemaContratos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-02T10:35:39.650-06:00  INFO 26756 --- [sistemaContratos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
