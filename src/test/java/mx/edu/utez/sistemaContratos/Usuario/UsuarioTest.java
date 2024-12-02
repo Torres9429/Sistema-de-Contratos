@@ -5,6 +5,50 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class UsuarioTest {
+
+    @Test
+    void iniciarSesionExitoso() {
+        UsuarioService usuarioService = new UsuarioService();
+        Usuario usuario = new Usuario("Andrea", "Lopez", "andrea@gmail.com", "7779876543", "AndreaPass1", "Usuario", true);
+        usuarioService.registrarUsuario(usuario);
+
+        Usuario resultado = usuarioService.iniciarSesion("andrea@gmail.com", "AndreaPass1");
+
+        assertNotNull(resultado);
+        assertEquals("Andrea", resultado.getNombre());
+    }
+
+    @Test
+    void iniciarSesionConCredencialesInvalidas() {
+        UsuarioService usuarioService = new UsuarioService();
+        Usuario usuario = new Usuario("Andrea", "Lopez", "andrea@gmail.com", "7779876543", "AndreaPass1", "Usuario", true);
+        usuarioService.registrarUsuario(usuario);
+
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> usuarioService.iniciarSesion("andrea@gmail.com", "PasswordIncorrecto"));
+
+        assertEquals("Credenciales inválidas", exception.getMessage());
+    }
+
+    @Test
+    void cerrarSesionExitoso() {
+        UsuarioService usuarioService = new UsuarioService();
+        Usuario usuario = new Usuario("Andrea", "Lopez", "andrea@gmail.com", "7779876543", "AndreaPass1", "Usuario", true);
+        usuarioService.registrarUsuario(usuario);
+
+        boolean resultado = usuarioService.cerrarSesion(usuario);
+
+        assertTrue(resultado);
+    }
+
+    @Test
+    void cerrarSesionSinHaberIniciadoSesion() {
+        UsuarioService usuarioService = new UsuarioService();
+        Usuario usuario = new Usuario("Andrea", "Lopez", "andrea@gmail.com", "7779876543", "AndreaPass1", "Usuario", true);
+
+        Exception exception = assertThrows(IllegalStateException.class, () -> usuarioService.cerrarSesion(usuario));
+
+        assertEquals("El usuario no ha iniciado sesión", exception.getMessage());
+    }
     @Test
     void registrarUsuarioConCamposCompletos() {
         UsuarioService usuarioService = new UsuarioService();
@@ -98,4 +142,5 @@ class UsuarioTest {
 
         assertEquals(false, usuario.isEstado());
     }
+
 }

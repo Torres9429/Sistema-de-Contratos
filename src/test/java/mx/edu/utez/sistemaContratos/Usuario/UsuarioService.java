@@ -2,6 +2,7 @@ package mx.edu.utez.sistemaContratos.Usuario;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.LinkedTransferQueue;
 
 public class UsuarioService {
     private List<Usuario> usuarios = new ArrayList<>();
@@ -39,6 +40,27 @@ public class UsuarioService {
         usuario.setNombre(nuevoNombre);
         usuario.setApellido(nuevoApellido);
         usuario.setTelefono(nuevoTelefono);
+        return true;
+    }
+    public Usuario iniciarSesion(String correo, String contrasena) {
+        for (Usuario usuario : usuarios) {
+            if (usuario.getCorreo().equals(correo) && usuario.getContrasena().equals(contrasena)) {
+                if (!usuario.isEstado()) {
+                    throw new IllegalArgumentException("El usuario está deshabilitado");
+                }
+                LinkedTransferQueue<Usuario> usuariosActivos = null;
+                usuariosActivos.add(usuario);
+                return usuario;
+            }
+        }
+        throw new IllegalArgumentException("Credenciales inválidas");
+    }
+    public boolean cerrarSesion(Usuario usuario) {
+        LinkedTransferQueue<Object> usuariosActivos = null;
+        if (!usuariosActivos.contains(usuario)) {
+            throw new IllegalStateException("El usuario no ha iniciado sesión");
+        }
+        usuariosActivos.remove(usuario);
         return true;
     }
 
