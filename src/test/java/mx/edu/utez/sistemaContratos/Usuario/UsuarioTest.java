@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class UsuarioTest {
     /*
-    *
+
 Nombre del Caso de Prueba: Registrar Usuario
 ID del Caso de Prueba: CP-001
 Creado por: Abril Aidee Medina Villa
