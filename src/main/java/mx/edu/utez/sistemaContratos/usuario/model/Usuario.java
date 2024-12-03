@@ -75,6 +75,16 @@ public class Usuario {
         this.roles = roles;
         this.tokenRecuperacion = tokenRecuperacion;
     }
+
+    public Usuario(String nombre, String apellidos, String correo, String telefono, String contrasena, boolean status) {
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.correo = correo;
+        this.telefono = telefono;
+        this.contrasena = contrasena;
+        this.status = status;
+    }
+
     public Usuario() {  }
 
     public Long getId() {
