@@ -2,6 +2,7 @@ package mx.edu.utez.sistemaContratos.contrato.model;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
@@ -13,6 +14,7 @@ public class ContratoDto {
     @NotBlank(groups = {Modify.class, Register.class}, message = "Es necesario la descripción")
     private String descripcion;
     @NotNull(groups = {Modify.class, Register.class}, message = "La fecha no puede ser nula")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date fechaVencimiento;
     @NotNull(groups = {ContratoDto.Modify.class, ContratoDto.ChangeStatus.class},message = "El id del cliente no puede ser nulo")
     private Long clienteId;

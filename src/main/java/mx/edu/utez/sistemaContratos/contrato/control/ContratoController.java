@@ -64,13 +64,33 @@ public class ContratoController {
 
     @GetMapping("/clientes")
     public ResponseEntity<Message> getClientes() {
-        List<Cliente> clientes = clienteRepository.findAll();  // Asegúrate de que este método devuelva todos los clientes
+        List<Cliente> clientes = clienteRepository.findAll();
         return new ResponseEntity<>(new Message(clientes, "Listado de clientes", TypesResponse.SUCCESS), HttpStatus.OK);
     }
 
     @GetMapping("/categorias")
     public ResponseEntity<Message> getCategorias() {
-        List<Categoria> categorias = categoriaRepository.findAll();  // Asegúrate de que este método devuelva todas las categorías
+        List<Categoria> categorias = categoriaRepository.findAll();
         return new ResponseEntity<>(new Message(categorias, "Listado de categorías", TypesResponse.SUCCESS), HttpStatus.OK);
     }
+
+    @GetMapping("/clientes/{id}")
+    public ResponseEntity<Message> getClienteById(@PathVariable Long id) {
+        Cliente cliente = clienteRepository.findById(id).orElse(null);
+        if (cliente != null) {
+            return new ResponseEntity<>(new Message(cliente, "Cliente encontrado", TypesResponse.SUCCESS), HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(new Message("Cliente no encontrado", "ERROR", TypesResponse.ERROR), HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @GetMapping("/categorias/{id}")
+    public ResponseEntity<Message> getCategoriaById(@PathVariable Long id) {
+        Categoria categoria = categoriaRepository.findById(id).orElse(null);
+        if (categoria == null) {
+            return new ResponseEntity<>(new Message(null, "Categoría no encontrada", TypesResponse.ERROR), HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<>(new Message(categoria, "Categoría encontrada", TypesResponse.SUCCESS), HttpStatus.OK);
+    }
+
 }
