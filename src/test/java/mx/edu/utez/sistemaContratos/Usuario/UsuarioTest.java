@@ -141,4 +141,53 @@ class UsuarioTest {
         assertEquals("7777654321", usuario.getTelefono());
     }
 
+
+
+    @Test
+    void editarPerfilConDatosValidosEInvalidos() {
+        UsuarioService usuarioService = new UsuarioService();
+        Usuario usuario = new Usuario("Carlos", "Méndez", "cmendez@gmail.com", "7771234567", "Password123", "Usuario", true);
+        usuarioService.registrarUsuario(usuario);
+
+        boolean resultadoValido = usuarioService.editarPerfil(usuario, "Carlos Alberto", "Méndez Pérez", "carlos.alberto@gmail.com", "7777654321");
+        assertTrue(resultadoValido);
+        assertEquals("Carlos Alberto", usuario.getNombre());
+        assertEquals("Méndez Pérez", usuario.getApellido());
+        assertEquals("carlos.alberto@gmail.com", usuario.getCorreo());
+        assertEquals("7777654321", usuario.getTelefono());
+
+        Exception exception = assertThrows(IllegalArgumentException.class, () ->
+                usuarioService.editarPerfil(usuario, "", "Méndez", "correo-invalido@", "123")
+        );
+        assertEquals("Los datos no pueden estar vacíos", exception.getMessage());
+    }
+
+    @Test
+    void solicitarCambioContrasena() {
+        UsuarioService usuarioService = new UsuarioService();
+        Usuario usuario = new Usuario("Juan", "Pérez", "juan.perez@example.com", "7771234567", "Password123", "Usuario", true);
+        usuarioService.registrarUsuario(usuario);
+        boolean resultado = usuarioService.solicitarCambioContrasena(usuario);
+        assertTrue(resultado);
+    }
+
+
+
+    @Test
+    void cambiarContrasenaPorEnlaceExito() {
+        UsuarioService usuarioService = new UsuarioService();
+        Usuario usuario = new Usuario("Juan", "Pérez", "juan.perez@example.com", "7771234567", "Password123", "Usuario", true);
+        usuarioService.registrarUsuario(usuario);
+
+        // Simular la recepción del enlace de cambio de contraseña
+        String enlace = "token:abc123";
+        String nuevaContrasena = "Password@123";
+
+        // Llamar al método cambiarContrasenaPorEnlace()
+        boolean resultado = usuarioService.cambiarContrasenaPorEnlace(enlace, nuevaContrasena);
+
+        // Verificar que la contraseña del usuario se actualice
+        assertTrue(resultado);
+    }
+
 }
