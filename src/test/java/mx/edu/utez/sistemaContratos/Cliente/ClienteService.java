@@ -25,4 +25,32 @@ public class ClienteService {
     public List<Cliente> consultarClientes() {
         return clientes;
     }
+
+    public boolean actualizarCliente(String correo, String nuevoNombre, String nuevoApellido, String nuevoTelefono) {
+        for (Cliente cliente : clientes) {
+            if (cliente.getCorreo().equals(correo)) {
+                cliente.setNombre(nuevoNombre);
+                cliente.setApellido(nuevoApellido);
+                cliente.setTelefono(nuevoTelefono);
+                return true;
+            }
+        }
+        throw new IllegalArgumentException("Cliente no encontrado");
+    }
+
+    public void validarCorreo(String correo) {
+        if (correo == null || !correo.contains("@")) {
+            throw new IllegalArgumentException("Correo inválido");
+        }
+    }
+
+    public boolean cambiarEstadoCliente(String correo, boolean nuevoEstado) {
+        for (Cliente cliente : clientes) {
+            if (cliente.getCorreo().equals(correo)) {
+                cliente.setEstado(nuevoEstado);
+                return true;
+            }
+        }
+        throw new IllegalArgumentException("Cliente no encontrado");
+    }
 }
