@@ -27,13 +27,16 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/usuarios/login").hasAuthority("ROLE")
-                        .requestMatchers("/us/").hasAuthority("ROLE_TOWN_ACCESS")
-                        .requestMatchers("/state/**").hasAuthority("ROLE_STATE_ACCESS")
+                        // Se usa para que ROLE_ADMIN_ACCESS accede a todas las rutas
+                        .requestMatchers("/**").hasAuthority("ROLE_ADMIN_ACCESS")
+                        // Se usa para que ROLE_GERENTE_ACCESS accede a las rutas de contrato
+                        .requestMatchers("/contrato/**").hasAuthority("ROLE_GERENTE_ACCESS")
+                        // Se usa para que la ruta de login sea accesible para todos
+                        .requestMatchers("/usuarios/login").permitAll()
                         .anyRequest().authenticated()
                 )
-                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
-                //.addFilterBefore(jwtRequestFilter, UsernamePassword AuthenticationFilter.class);
+                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                .addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
 
         return http.build();
     }
