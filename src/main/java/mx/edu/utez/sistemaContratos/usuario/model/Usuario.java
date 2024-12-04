@@ -78,6 +78,11 @@ public class Usuario {
         this.contratos = contratos;
         this.roles = roles;
     }
+    public Usuario(String correo, String contrasena) {
+        this.correo = correo;
+        this.contrasena = contrasena;
+    }
+
 
     public String getCode() {
         return code;
