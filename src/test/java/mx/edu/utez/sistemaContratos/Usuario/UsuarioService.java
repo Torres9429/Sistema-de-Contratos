@@ -32,7 +32,31 @@ public class UsuarioService {
     }
 
     public boolean cambiarEstadoUsuario(Usuario usuario, boolean nuevoEstado) {
+        if (!usuarios.contains(usuario)) {
+            throw new IllegalArgumentException("El usuario no está registrado en el sistema.");
+        }
         usuario.setEstado(nuevoEstado);
+        return true;
+    }
+
+    public Usuario consultarPerfilUsuario(String correo) {
+        for (Usuario usuario : usuarios) {
+            if (usuario.getCorreo().equals(correo)) {
+                return usuario;
+            }
+        }
+        throw new IllegalArgumentException("Usuario no encontrado.");
+    }
+
+
+    public boolean editarPerfil(Usuario usuario, String nuevoNombre, String nuevoApellido, String nuevoCorreo, String nuevoTelefono) {
+        if (nuevoNombre == null || nuevoNombre.isEmpty() || nuevoApellido == null || nuevoApellido.isEmpty() || nuevoCorreo == null || nuevoCorreo.isEmpty() || nuevoTelefono == null || nuevoTelefono.isEmpty()) {
+            throw new IllegalArgumentException("Los datos no pueden estar vacíos");
+        }
+        usuario.setNombre(nuevoNombre);
+        usuario.setApellido(nuevoApellido);
+        usuario.setCorreo(nuevoCorreo);
+        usuario.setTelefono(nuevoTelefono);
         return true;
     }
 

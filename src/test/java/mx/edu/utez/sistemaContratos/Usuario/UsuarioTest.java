@@ -99,4 +99,48 @@ class UsuarioTest {
 
         assertEquals(false, usuario.isEstado());
     }
+
+    @Test
+    void cambiarEstadoUsuarioFallo() {
+        UsuarioService usuarioService = new UsuarioService();
+        Usuario usuario = new Usuario("Carlos","Méndez","cmendez@gmail.com","7771234567","Password123", "Usuario",true);
+
+        Exception exception = assertThrows(IllegalArgumentException.class,() -> usuarioService.cambiarEstadoUsuario(usuario, false));
+        assertEquals("El usuario no está registrado en el sistema.", exception.getMessage());
+    }
+
+    @Test
+    void consultarPerfilUsuarioExito() {
+        UsuarioService usuarioService = new UsuarioService();
+        Usuario usuario = new Usuario("Carlos","Méndez","cmendez@gmail.com","7771234567","Password123", "Usuario",true);
+        usuarioService.registrarUsuario(usuario);
+
+        Usuario perfilConsultado = usuarioService.consultarPerfilUsuario("cmendez@gmail.com");
+        assertNotNull(perfilConsultado);
+
+        assertEquals("Carlos", perfilConsultado.getNombre());
+        assertEquals("Méndez", perfilConsultado.getApellido());
+        assertEquals("cmendez@gmail.com", perfilConsultado.getCorreo());
+        assertEquals("7771234567", perfilConsultado.getTelefono());
+        assertEquals("Password123", perfilConsultado.getContrasena());
+        assertEquals("Usuario", perfilConsultado.getRol());
+
+        assertTrue(perfilConsultado.isEstado());
+    }
+
+    @Test
+    void editarPerfil() {
+        UsuarioService usuarioService = new UsuarioService();
+        Usuario usuario = new Usuario("Carlos","Méndez","cmendez@gmail.com","7771234567","Password123","Usuario",true);
+        usuarioService.registrarUsuario(usuario);
+
+        boolean resultado = usuarioService.editarPerfil(usuario,"Carlos Alberto","Méndez Pérez", "cmendezperez@gmail.com","7777654321");
+        assertTrue(resultado);
+
+        assertEquals("Carlos Alberto", usuario.getNombre());
+        assertEquals("Méndez Pérez", usuario.getApellido());
+        assertEquals("cmendezperez@gmail.com", usuario.getCorreo());
+        assertEquals("7777654321", usuario.getTelefono());
+    }
+
 }
