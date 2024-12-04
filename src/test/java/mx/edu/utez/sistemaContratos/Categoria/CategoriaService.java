@@ -1,6 +1,7 @@
 package mx.edu.utez.sistemaContratos.Categoria;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class CategoriaService {
     private List<Categoria> categorias = new ArrayList<>();
@@ -25,6 +26,23 @@ public class CategoriaService {
     public boolean cambiarEstadoCategoria(Categoria categoria, boolean nuevoEstado) {
         categoria.setEstado(nuevoEstado);
         return true;
+    }
+
+    public List<Categoria> consultarCategoriasActivas() {
+        return categorias.stream()
+                .filter(Categoria::isEstado)
+                .collect(Collectors.toList());
+    }
+
+    public boolean actualizarCategoria(Categoria categoriaModificada) {
+        for (Categoria categoria : categorias) {
+            if (categoria.getNombre().equals(categoriaModificada.getNombre())) {
+                categoria.setDescripcion(categoriaModificada.getDescripcion());
+                categoria.setEstado(categoriaModificada.isEstado());
+                return true;
+            }
+        }
+        throw new IllegalArgumentException("La categoría no existe");
     }
 
 }

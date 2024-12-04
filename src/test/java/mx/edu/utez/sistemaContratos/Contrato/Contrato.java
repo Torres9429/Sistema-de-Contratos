@@ -5,14 +5,16 @@ public class Contrato {
     private String cliente;
     private String categoria;
     private String fechaVencimiento;
+    private boolean estado;
 
     public Contrato() {}
 
-    public Contrato(String nombre, String cliente, String categoria, String fechaVencimiento) {
+    public Contrato(String nombre, String cliente, String categoria, String fechaVencimiento, boolean estado) {
         this.nombre = nombre;
         this.cliente = cliente;
         this.categoria = categoria;
         this.fechaVencimiento = fechaVencimiento;
+        this.estado = estado;
     }
 
     public String getNombre() {
@@ -45,5 +47,13 @@ public class Contrato {
 
     public void setFechaVencimiento(String fechaVencimiento) {
         this.fechaVencimiento = fechaVencimiento;
+    }
+
+    public boolean isEstado() {
+        return estado;
+    }
+
+    public void setEstado(boolean estado) {
+        this.estado = estado;
     }
 }
