@@ -32,9 +32,11 @@ public class EmailSender {
             helper.setTo(to);
             helper.setSubject(subject);
             helper.setText(htlmMsg, true);
+            helper.setFrom("saac.oficial.utez@gmail.com");
             emailSender.send(mimeMessage);
         } catch (Exception e) {
-            logger.error("No se pudo enviar el correo");
+            e.printStackTrace();
+            logger.error("No se pudo enviar el correo"+ e.getMessage());
         }
     }
 }

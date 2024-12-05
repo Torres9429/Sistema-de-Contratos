@@ -46,6 +46,8 @@ public class Usuario {
     @Column(name = "status", columnDefinition = "BOOL DEFAULT TRUE")
     private boolean status = true;
 
+    @Column(name = "code", columnDefinition = "VARCHAR(10)")
+    private String code;
     @ManyToMany
     @JsonIgnore
     private List<Contrato> contratos;
@@ -58,12 +60,18 @@ public class Usuario {
     )
     private Set<Role> roles = new HashSet<>();
 
-    @Column(name = "token_recuperacion", columnDefinition = "VARCHAR(255)")
-    private String tokenRecuperacion;
+    public Usuario(String correo, String code) {
+        this.correo = correo;
+        this.code = code;
+    }
 
-    // Constructores, Getters y Setters omitidos para brevedad
+    public Usuario(Long id, String correo, String code) {
+        this.id = id;
+        this.correo = correo;
+        this.code = code;
+    }
 
-    public Usuario(Long id, String nombre, String apellidos, String correo, String telefono, String contrasena, boolean status, List<Contrato> contratos, Set<Role> roles, String tokenRecuperacion) {
+    public Usuario(Long id, String nombre, String apellidos, String correo, String telefono, String contrasena, boolean status, List<Contrato> contratos, Set<Role> roles) {
         this.id = id;
         this.nombre = nombre;
         this.apellidos = apellidos;
@@ -73,7 +81,6 @@ public class Usuario {
         this.status = status;
         this.contratos = contratos;
         this.roles = roles;
-        this.tokenRecuperacion = tokenRecuperacion;
     }
 
     public Usuario(String nombre, String apellidos, String correo, String telefono, String contrasena, boolean status) {
@@ -159,11 +166,11 @@ public class Usuario {
         this.roles = roles;
     }
 
-    public String getTokenRecuperacion() {
-        return tokenRecuperacion;
+    public String getCode() {
+        return code;
     }
 
-    public void setTokenRecuperacion(String tokenRecuperacion) {
-        this.tokenRecuperacion = tokenRecuperacion;
+    public void setCode(String code) {
+        this.code = code;
     }
 }

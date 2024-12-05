@@ -1,17 +1,12 @@
 package mx.edu.utez.sistemaContratos.usuario.control;
 
-import mx.edu.utez.sistemaContratos.cliente.model.ClienteDto;
-import mx.edu.utez.sistemaContratos.usuario.model.Usuario;
 import mx.edu.utez.sistemaContratos.usuario.model.UsuarioDto;
 import mx.edu.utez.sistemaContratos.utils.Message;
-import mx.edu.utez.sistemaContratos.utils.TypesResponse;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-import java.util.Map;
 
 @RestController
 @RequestMapping("/usuarios")
@@ -53,6 +48,15 @@ public class UsuarioController {
     @GetMapping("/actives")
     public ResponseEntity<Message> findActives() {
         return usuarioService.findActives();
+    }
+    @PostMapping("/send-email")
+    public ResponseEntity<Object> sendEmail(@Validated({UsuarioDto.FindByEmail.class}) @RequestBody UsuarioDto dto){
+        return usuarioService.sendEmail(dto);
+    }
+
+    @PostMapping("/verify-code")
+    public ResponseEntity<Object> verifyCode(@Validated({UsuarioDto.VerifyCode.class}) @RequestBody UsuarioDto dto){
+        return usuarioService.verifyCode(dto);
     }
 
 }

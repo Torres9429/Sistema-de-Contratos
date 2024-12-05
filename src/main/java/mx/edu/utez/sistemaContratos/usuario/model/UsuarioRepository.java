@@ -8,9 +8,9 @@ import java.util.Optional;
 
 @Repository
 public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
-    //<T> ScopedValue<T> findByCorreo(String correo);
+    Optional<Usuario> findFirstByCorreo(String correo);
+
+    Optional<Usuario> findFirstByCorreoAndCode(String correo, String code);
 
     List<Usuario> findAllByStatusIsTrue();
-
-    Optional<Object> findByCorreo(String correo);
 }

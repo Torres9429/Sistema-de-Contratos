@@ -14,7 +14,7 @@ public class UsuarioDto {
     @NotBlank(groups = {Modify.class, Register.class}, message = "Son necesarios los apellidos")
     private String apellidos;
 
-    @NotBlank(groups = {Modify.class, Register.class}, message = "Es necesario el correo electrónico")
+    @NotBlank(groups = {FindByEmail.class,VerifyCode.class,Modify.class, Register.class}, message = "Es necesario el correo electrónico")
     private String correo;
 
     @NotBlank(groups = {Modify.class, Register.class}, message = "Es necesario el teléfono")
@@ -24,9 +24,10 @@ public class UsuarioDto {
     private String contrasena;
 
     @NotBlank(groups = {Modify.class, Register.class}, message = "Es necesario el rol")
-    private String role; // Corregido 'role' para mantener consistencia en los nombres
+    private String role;
 
-    // Constructor vacío para la serialización o la creación de instancias sin datos
+    @NotBlank(groups = {VerifyCode.class})
+    private String code;
     public UsuarioDto() {
     }
 
@@ -98,8 +99,18 @@ public class UsuarioDto {
         this.role = role;
     }
 
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
     // Interfaces para validación
     public interface Register {}
     public interface Modify {}
     public interface ChangeStatus {}
+    public interface FindByEmail {}
+    public interface VerifyCode {}
 }
