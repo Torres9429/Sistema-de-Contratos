@@ -38,7 +38,7 @@ public class Usuario {
     @Column(name = "telefono", columnDefinition = "VARCHAR(15)")
     private String telefono;
 
-    @NotBlank(message = "La contraseña es obligatoria")
+    //@NotBlank(message = "La contraseña es obligatoria")
     @Size(min = 8, message = "La contraseña debe tener al menos 8 caracteres")
     @Column(name = "contrasena", columnDefinition = "VARCHAR(70)")
     private String contrasena;
@@ -60,6 +60,10 @@ public class Usuario {
     )
     private Set<Role> roles = new HashSet<>();
 
+//    public Usuario(String correo, String contrasena) {
+//        this.correo = correo;
+//        this.contrasena = contrasena;
+//    }
     public Usuario(String correo, String code) {
         this.correo = correo;
         this.code = code;
