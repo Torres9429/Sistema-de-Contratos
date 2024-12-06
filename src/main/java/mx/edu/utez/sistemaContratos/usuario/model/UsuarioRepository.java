@@ -15,5 +15,5 @@ import java.util.Optional;
 
     Optional<Usuario> findByCorreo(String mail);
 
-    Optional<Usuario> findByUsername(String gerenteUsuario);
+    Optional<Usuario> findByNombre(String gerenteUsuario);
 }

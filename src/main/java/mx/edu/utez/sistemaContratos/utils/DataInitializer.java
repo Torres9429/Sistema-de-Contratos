@@ -37,7 +37,7 @@ public class DataInitializer {
                 Role roleGerente = new Role("ROLE_GERENTE_ACCESS");
                 roleRepository.saveAndFlush(roleGerente);
 
-                Optional<Usuario> optionalUsuario = usuarioRepository.findByUsername("gerenteUsuario");
+                Optional<Usuario> optionalUsuario = usuarioRepository.findByNombre("gerenteUsuario");
                 if (!optionalUsuario.isPresent()) {
                     Usuario gerente = new Usuario("gerente", passwordEncoder.encode("password123"));
                     gerente.getRoles().add(roleGerente);

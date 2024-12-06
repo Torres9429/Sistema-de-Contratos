@@ -6,8 +6,6 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import mx.edu.utez.sistemaContratos.contrato.model.Contrato;
-import mx.edu.utez.sistemaContratos.role.model.Role;
-
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -53,13 +51,7 @@ public class Usuario {
     @JsonIgnore
     private List<Contrato> contratos;
 
-    @ManyToMany
-    @JoinTable(
-            name = "usuario_role",
-            joinColumns = @JoinColumn(name = "usuario_id"),
-            inverseJoinColumns = @JoinColumn(name = "role_id")
-    )
-    private Set<Role> roles = new HashSet<>();
+    private String roL;
 
 
 
@@ -158,13 +150,7 @@ public class Usuario {
         this.contratos = contratos;
     }
 
-    public Set<Role> getRoles() {
-        return roles;
-    }
 
-    public void setRoles(Set<Role> roles) {
-        this.roles = roles;
-    }
 
 
 }
