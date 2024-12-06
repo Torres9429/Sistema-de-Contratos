@@ -1,7 +1,6 @@
 package mx.edu.utez.sistemaContratos.usuario.control;
-import mx.edu.utez.sistemaContratos.cliente.model.Cliente;
-import mx.edu.utez.sistemaContratos.usuario.model.Usuario;
-import mx.edu.utez.sistemaContratos.usuario.model.UsuarioDto;
+import mx.edu.utez.sistemaContratos.role.model.Role;
+import mx.edu.utez.sistemaContratos.role.model.RoleRepository;
 import mx.edu.utez.sistemaContratos.usuario.model.Usuario;
 import mx.edu.utez.sistemaContratos.usuario.model.UsuarioDto;
 import mx.edu.utez.sistemaContratos.usuario.model.UsuarioRepository;
@@ -11,8 +10,11 @@ import mx.edu.utez.sistemaContratos.utils.TypesResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -25,12 +27,18 @@ import java.util.Random;
 public class UsuarioService {
     private static final Logger logger = LoggerFactory.getLogger(UsuarioService.class);
     private final UsuarioRepository usuarioRepository;
+    private final RoleRepository roleRepository;
     private final EmailSender emailSender;
+    private final PasswordEncoder passwordEncoder;
 
-    @Autowired
-    public UsuarioService(UsuarioRepository usuarioRepository, EmailSender emailSender) {
+    public UsuarioService(
+            UsuarioRepository usuarioRepository,
+            EmailSender emailSender,
+            PasswordEncoder passwordEncoder, RoleRepository roleRepository) {
         this.usuarioRepository = usuarioRepository;
         this.emailSender = emailSender;
+        this.passwordEncoder = passwordEncoder;
+        this.roleRepository = roleRepository;
     }
     @Transactional(rollbackFor = {SQLException.class})
     public ResponseEntity<Object> sendEmail(UsuarioDto dto) {
@@ -266,7 +274,26 @@ public class UsuarioService {
         }
         if (usuarioRepository.existsByCorreo(dto.getCorreo())) { return new ResponseEntity<>(new Message("El correo ya está registrado", TypesResponse.WARNING), HttpStatus.BAD_REQUEST); }
         // Guardar el usuario
-        Usuario usuario = new Usuario(dto.getNombre(), dto.getApellidos(), dto.getCorreo(), dto.getTelefono(), dto.getContrasena(),true);
+        Optional<Role> optionalRole = roleRepository.findByNombre(dto.getRole()); // Cambia 'getRole' según tu DTO
+        if (optionalRole.isEmpty()) {
+            return new ResponseEntity<>(new Message("Rol no encontrado", TypesResponse.WARNING), HttpStatus.BAD_REQUEST);
+        }
+        Role role = optionalRole.get();
+        String contrasenaEncriptada = passwordEncoder.encode(dto.getContrasena());
+        Usuario usuario = new Usuario(
+                dto.getNombre(),
+                dto.getApellidos(),
+                dto.getCorreo(),
+                dto.getTelefono(),
+                contrasenaEncriptada,
+                true
+        );
+        // Asociar el rol al usuario
+        usuario.getRoles().add(role);
+
+        // Guardar el usuario
+        usuario = usuarioRepository.save(usuario);
+
         usuario = usuarioRepository.saveAndFlush(usuario);
         if (usuario == null) {
             return new ResponseEntity<>(new Message("El usuario no se registró", TypesResponse.ERROR), HttpStatus.BAD_REQUEST);
@@ -274,6 +301,7 @@ public class UsuarioService {
         logger.info("El usuario se registró correctamente");
         return new ResponseEntity<>(new Message(usuario.getCorreo(), "Usuario registrado correctamente", TypesResponse.SUCCESS), HttpStatus.CREATED);
     }
+
 
     @Transactional(rollbackFor = {SQLException.class})
     public ResponseEntity<Message> update(UsuarioDto dto) {
@@ -295,7 +323,6 @@ public class UsuarioService {
         if (!usuarioOptional.isPresent()) {
             return new ResponseEntity<>(new Message("El usuario no existe", TypesResponse.ERROR), HttpStatus.NOT_FOUND);
         }
-
         Usuario usuario = usuarioOptional.get();
         usuario.setNombre(dto.getNombre());
         usuario.setApellidos(dto.getApellidos());
