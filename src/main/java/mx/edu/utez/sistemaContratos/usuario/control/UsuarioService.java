@@ -290,10 +290,6 @@ public class UsuarioService {
         );
         // Asociar el rol al usuario
         usuario.getRoles().add(role);
-
-        // Guardar el usuario
-        usuario = usuarioRepository.save(usuario);
-
         usuario = usuarioRepository.saveAndFlush(usuario);
         if (usuario == null) {
             return new ResponseEntity<>(new Message("El usuario no se registró", TypesResponse.ERROR), HttpStatus.BAD_REQUEST);
