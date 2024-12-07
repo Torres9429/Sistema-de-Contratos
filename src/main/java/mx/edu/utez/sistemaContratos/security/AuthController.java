@@ -1,5 +1,7 @@
 package mx.edu.utez.sistemaContratos.security;
 
+import mx.edu.utez.sistemaContratos.security.JwtUtil;
+import mx.edu.utez.sistemaContratos.security.UserDetailsServiceImpl;
 import mx.edu.utez.sistemaContratos.security.dto.AuthRequest;
 import mx.edu.utez.sistemaContratos.security.dto.AuthResponse;
 import mx.edu.utez.sistemaContratos.usuario.model.Usuario;
