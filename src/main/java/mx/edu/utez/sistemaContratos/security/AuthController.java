@@ -1,5 +1,7 @@
 package mx.edu.utez.sistemaContratos.security;
 
+import mx.edu.utez.sistemaContratos.security.JwtUtil;
+import mx.edu.utez.sistemaContratos.security.UserDetailsServiceImpl;
 import mx.edu.utez.sistemaContratos.security.dto.AuthRequest;
 import mx.edu.utez.sistemaContratos.security.dto.AuthResponse;
 import mx.edu.utez.sistemaContratos.usuario.model.Usuario;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 @RestController
+@RequestMapping("/auth")
 public class AuthController {
 
     private final AuthenticationManager authenticationManager;
