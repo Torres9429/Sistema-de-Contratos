@@ -1,5 +1,6 @@
 package mx.edu.utez.sistemaContratos.security;
 
+import mx.edu.utez.sistemaContratos.role.model.RoleRepository;
 import mx.edu.utez.sistemaContratos.security.JwtUtil;
 import mx.edu.utez.sistemaContratos.security.UserDetailsServiceImpl;
 import mx.edu.utez.sistemaContratos.security.dto.AuthRequest;
@@ -48,9 +49,11 @@ public class AuthController {
 
         Usuario user = usuarioRepository.findFirstByCorreo(authRequest.getCorreo())
                 .orElseThrow(() -> new Exception("Usuario no encontrado"));
+        // Obtener el rol del usuario
+        String role = user.getRoles().iterator().next().getNombre();
 
         long expirationTime = jwtUtil.getExpirationTime();
 
-        return new AuthResponse(jwt, user.getId(), user.getCorreo(), expirationTime);
+        return new AuthResponse(jwt, user.getId(), user.getCorreo(), role, expirationTime);
     }
 }
