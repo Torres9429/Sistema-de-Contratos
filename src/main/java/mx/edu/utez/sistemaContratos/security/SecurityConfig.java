@@ -36,15 +36,15 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/auth/login", "/register").permitAll()
                         .requestMatchers(
-                                "/usuarios/all",
-                                "/usuarios/{id}",
-                                "/usuarios/save",
-                                "/usuarios/update",
-                                "/usuarios/changeStatus",
-                                "/usuarios/actives",
-                                "/usuarios/send-email",
-                                "/usuarios/verify-code"
-                        ).hasAnyAuthority("ROLE_ADMIN_ACCESS", "ROLE_GERENTE_ACCESS")
+                                "/categoria/*",
+                                "/usuarios/*",
+                                "/clientes/*",
+                                "/contratos/*"
+                        ).hasAnyAuthority("ROLE_ADMIN_ACCESS")
+                        .requestMatchers(
+                                "/contratos/all"
+
+                        ).hasAnyAuthority("ROLE_GERENTE_ACCESS")
                         .anyRequest().authenticated()
                 )
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))

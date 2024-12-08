@@ -25,14 +25,16 @@ public class AuthController {
 
     private final JwtUtil jwtUtil;
     private final UsuarioRepository usuarioRepository;
+    private final RoleRepository roleRepository;
 
 
     @Autowired
-    public AuthController(AuthenticationManager authenticationManager, UserDetailsServiceImpl userDetailsService, JwtUtil jwtUtil, UsuarioRepository userRepository) {
+    public AuthController(AuthenticationManager authenticationManager, UserDetailsServiceImpl userDetailsService, JwtUtil jwtUtil, UsuarioRepository userRepository, RoleRepository roleRepository) {
         this.authenticationManager = authenticationManager;
         this.userDetailsService = userDetailsService;
         this.jwtUtil = jwtUtil;
         this.usuarioRepository = userRepository;
+        this.roleRepository = roleRepository;
     }
 
     @PostMapping("/login")
