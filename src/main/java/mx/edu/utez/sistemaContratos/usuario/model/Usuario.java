@@ -53,6 +53,7 @@ public class Usuario {
     private List<Contrato> contratos;
 
     @ManyToMany
+    @JsonIgnore
     @JoinTable(
             name = "usuario_role",
             joinColumns = @JoinColumn(name = "usuario_id"),

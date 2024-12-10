@@ -58,5 +58,18 @@ public class UsuarioController {
     public ResponseEntity<Object> verifyCode(@Validated({UsuarioDto.VerifyCode.class}) @RequestBody UsuarioDto dto){
         return usuarioService.verifyCode(dto);
     }
+    @PostMapping("/verify-password")
+    public ResponseEntity<Message> verifyPassword(@RequestBody UsuarioDto usuarioDto) {
+        return usuarioService.verifyPassword(usuarioDto);
+    }
+    @PutMapping("/change-password")
+    public ResponseEntity<Message> changePassword(@RequestBody UsuarioDto usuarioDto){
+        return usuarioService.cambiarContra(usuarioDto);
+    }
+    @PutMapping("/change-password-gral")
+    public ResponseEntity<Message> changePasswordUser(@RequestBody UsuarioDto usuarioDto){
+        return usuarioService.cambiarContraGral(usuarioDto);
+    }
+
 
 }

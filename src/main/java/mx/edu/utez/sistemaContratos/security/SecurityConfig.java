@@ -34,7 +34,16 @@ public class SecurityConfig {
                 .cors() // Habilita CORS usando el CorsConfigurationSource definido
                 .and()
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/auth/login", "/register").permitAll()
+                        .requestMatchers(
+                                "/usuarios/change-password-gral"
+                        ).permitAll()
+                        .requestMatchers(
+                                "/auth/login",
+                                "/register",
+                                "/usuarios/change-password",
+                                "/usuarios/send-email",
+                                "/usuarios/verify-code"
+                        ).permitAll()
                         .requestMatchers(
                                 "/categoria/*",
                                 "/usuarios/*",
@@ -46,6 +55,7 @@ public class SecurityConfig {
 
                         ).hasAnyAuthority("ROLE_GERENTE_ACCESS")
                         .anyRequest().authenticated()
+
                 )
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
