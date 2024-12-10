@@ -51,10 +51,13 @@ public class SecurityConfig {
                                 "/contratos/*"
                         ).hasAnyAuthority("ROLE_ADMIN_ACCESS")
                         .requestMatchers(
-                                "/contratos/all"
+                                "/contratos/all",
+                                "/categoria/all",
+                                "/clientes/all",
+                                "/contratos/status"
 
                         ).hasAnyAuthority("ROLE_GERENTE_ACCESS")
-                        .anyRequest().authenticated()
+                        //.anyRequest().authenticated()
 
                 )
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
