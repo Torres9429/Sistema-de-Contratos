@@ -1,5 +1,6 @@
 package mx.edu.utez.sistemaContratos.role.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import mx.edu.utez.sistemaContratos.usuario.model.Usuario;
 import jakarta.persistence.*;
 
@@ -18,6 +19,7 @@ public class Role {
     private String nombre;
 
     @ManyToMany(mappedBy = "roles")
+    @JsonBackReference
     private Set<Usuario> usuarios = new HashSet<>();
 
     public Role() {}
