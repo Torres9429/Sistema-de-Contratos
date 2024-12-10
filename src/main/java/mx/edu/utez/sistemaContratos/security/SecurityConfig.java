@@ -46,7 +46,7 @@ public class SecurityConfig {
                         ).permitAll()
                         .requestMatchers(
                                 "/categoria/*",
-                                "/usuarios/*",
+                                "/usuarios/**",
                                 "/clientes/*",
                                 "/contratos/*"
                         ).hasAnyAuthority("ROLE_ADMIN_ACCESS")

@@ -4,6 +4,7 @@ import mx.edu.utez.sistemaContratos.usuario.model.UsuarioDto;
 import mx.edu.utez.sistemaContratos.utils.Message;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -34,7 +35,7 @@ public class UsuarioController {
     public ResponseEntity<Message> save(@RequestBody UsuarioDto usuarioDto) {
         return usuarioService.save(usuarioDto);
     }
-
+    //@PreAuthorize("hasAnyAuthority('ROLE_ADMIN_ACCESS', 'ROLE_USER_ACCESS')")
     @PutMapping("/update")
     public ResponseEntity<Message> update(@RequestBody UsuarioDto usuarioDto) {
         return usuarioService.update(usuarioDto);
