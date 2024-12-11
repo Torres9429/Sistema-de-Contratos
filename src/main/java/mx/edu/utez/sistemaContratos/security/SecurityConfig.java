@@ -46,18 +46,18 @@ public class SecurityConfig {
                         ).permitAll()
                         .requestMatchers(
                                 "/categoria/*",
-                                "/usuarios/*",
+                                "/usuarios/**",
                                 "/clientes/*",
                                 "/contratos/*"
-                        ).hasAnyAuthority("ROLE_ADMIN_ACCESS")
-                        .requestMatchers(
+                        ).hasAnyAuthority("ROLE_ADMIN_ACCESS","ROLE_GERENTE_ACCESS")
+                        /*.requestMatchers(
                                 "/contratos/all",
-                                "/categoria/all",
                                 "/clientes/all",
+                                "/categoria/all",
                                 "/contratos/status"
 
-                        ).hasAnyAuthority("ROLE_GERENTE_ACCESS")
-                        //.anyRequest().authenticated()
+                        ).hasAnyAuthority("ROLE_GERENTE_ACCESS")*/
+                        .anyRequest().authenticated()
 
                 )
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))

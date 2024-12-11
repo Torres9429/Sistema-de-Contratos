@@ -302,6 +302,9 @@ public class UsuarioService {
 
     @Transactional(rollbackFor = {SQLException.class})
     public ResponseEntity<Message> update(UsuarioDto dto) {
+        if (dto.getId() == null) {
+            return new ResponseEntity<>(new Message("El id del usuario no puede ser nulo", TypesResponse.ERROR), HttpStatus.BAD_REQUEST);
+        }
         // Validación de longitudes
         if (dto.getNombre().length() > 50) {
             return new ResponseEntity<>(new Message("El nombre excede el número de caracteres permitidos", TypesResponse.WARNING), HttpStatus.BAD_REQUEST);
@@ -317,6 +320,7 @@ public class UsuarioService {
         }
 
         Optional<Usuario> usuarioOptional = usuarioRepository.findById(dto.getId());
+        System.out.println(dto.getId());
         if (!usuarioOptional.isPresent()) {
             return new ResponseEntity<>(new Message("El usuario no existe", TypesResponse.ERROR), HttpStatus.NOT_FOUND);
         }
