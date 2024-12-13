@@ -2,6 +2,7 @@ package mx.edu.utez.sistemaContratos.contrato.model;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
@@ -12,10 +13,13 @@ public class ContratoDto {
     private String nombre;
     @NotBlank(groups = {Modify.class, Register.class}, message = "Es necesario la descripción")
     private String descripcion;
-    @NotNull(groups = {ContratoDto.Modify.class, ContratoDto.ChangeStatus.class},message = "La fecha no puede ser nula")
+    @NotNull(groups = {Modify.class, Register.class}, message = "La fecha no puede ser nula")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date fechaVencimiento;
+    @NotNull(groups = {ContratoDto.Modify.class, ContratoDto.ChangeStatus.class},message = "El id del cliente no puede ser nulo")
     private Long clienteId;
-    private Long categoriaContrato_id;
+    @NotNull(groups = {ContratoDto.Modify.class, ContratoDto.ChangeStatus.class},message = "El id de la categoría no puede ser nulo")
+    private Long categoriaId;
 
     public Long getId() {
         return id;
@@ -57,12 +61,12 @@ public class ContratoDto {
         this.clienteId = clienteId;
     }
 
-    public Long getCategoriaContrato_id() {
-        return categoriaContrato_id;
+    public Long getCategoriaId() {
+        return categoriaId;
     }
 
-    public void setCategoriaContrato_id(Long categoriaContrato_id) {
-        this.categoriaContrato_id = categoriaContrato_id;
+    public void setCategoriaId(Long categoriaId) {
+        this.categoriaId = categoriaId;
     }
 
     public interface Register {
