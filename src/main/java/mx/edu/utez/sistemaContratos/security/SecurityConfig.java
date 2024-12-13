@@ -53,13 +53,35 @@ public class SecurityConfig {
                                 "/usuarios/change-password",
                                 "/usuarios/verify-password",
                                 "/usuarios/{id}"
-
-                        ).hasAnyAuthority("ROLE_GERENTE_ACCESS")
+                        ).hasAnyAuthority("ROLE_GERENTE_ACCESS","ROLE_ADMIN_ACCESS")
                         .requestMatchers(
-                                "/categoria/*",
-                                "/usuarios/*",
-                                "/clientes/*",
-                                "/contratos/*"
+                                "/clientes/**",
+                                "/categoria/save",
+                                "/categoria/all",
+                                "/categoria/actives",
+                                "/categoria/update",
+                                "/categoria/change-status",
+                                "/usuarios/verify-code",
+                                "/usuarios/send-email",
+                                "/usuarios/save",
+                                "/usuarios/actives",
+                                "/usuarios/update",
+                                "/usuarios/all",
+                                "/usuarios/change-password",
+                                "/usuarios/{id}",
+                                "/usuarios/send-email",
+                                "/usuarios/change-password-gral",
+                                "/clientes/all",
+                                "/clientes/save",
+                                "/clientes/update",
+                                "/clientes/actives",
+                                "/clientes/changeStatus",
+                                "/clientes/{id}",
+                                "/contratos/all",
+                                "/contratos/save",
+                                "/contratos/update",
+                                "/contratos/status",
+                                "/contratos/change-status"
                         ).hasAnyAuthority("ROLE_ADMIN_ACCESS"/*,"ROLE_GERENTE_ACCESS"*/)
                         .anyRequest().authenticated()
 

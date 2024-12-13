@@ -76,7 +76,7 @@ public class ContratoService {
         if (categoria == null) {
             return new ResponseEntity<>(new Message("Categoría de contrato no encontrada", TypesResponse.WARNING), HttpStatus.BAD_REQUEST);
         }
-
+        System.out.println(dto.getFechaVencimiento());
         Contrato contrato = new Contrato(dto.getNombre(), dto.getDescripcion(),dto.getFechaVencimiento());
         contrato.setCategorias(categoria);
         contrato.setCliente(cliente);
