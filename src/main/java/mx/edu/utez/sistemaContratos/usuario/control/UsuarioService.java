@@ -363,14 +363,15 @@ public class UsuarioService {
     @Transactional(rollbackFor = {SQLException.class})
     public ResponseEntity<Message> cambiarContra(UsuarioDto dto){
         Optional<Usuario> usuarioOptional = usuarioRepository.findById(dto.getId());
+        System.out.println(dto.getId());
         if (!usuarioOptional.isPresent()) {
             return new ResponseEntity<>(new Message("El usuario no existe", TypesResponse.ERROR), HttpStatus.NOT_FOUND);
         }
         Usuario usuario = usuarioOptional.get();
-        // Validar la contraseña actual
+        /* Validar la contraseña actual
         if (!passwordEncoder.matches(dto.getContrasena(), usuario.getContrasena())) {
             return new ResponseEntity<>(new Message("La contraseña actual es incorrecta", TypesResponse.ERROR), HttpStatus.BAD_REQUEST);
-        }
+        }*/
 
         usuario.setContrasena(passwordEncoder.encode(dto.getContrasena()));
         usuario = usuarioRepository.saveAndFlush(usuario);
