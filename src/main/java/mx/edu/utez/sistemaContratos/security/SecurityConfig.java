@@ -45,18 +45,22 @@ public class SecurityConfig {
                                 "/usuarios/verify-code"
                         ).permitAll()
                         .requestMatchers(
+                                "/contratos/all",
+                                "/clientes/all",
+                                "/categoria/all",
+                                "/contratos/status",
+                                "/usuarios/update",
+                                "/usuarios/change-password",
+                                "/usuarios/verify-password",
+                                "/usuarios/{id}"
+
+                        ).hasAnyAuthority("ROLE_GERENTE_ACCESS")
+                        .requestMatchers(
                                 "/categoria/*",
                                 "/usuarios/*",
                                 "/clientes/*",
                                 "/contratos/*"
-                        ).hasAnyAuthority("ROLE_ADMIN_ACCESS","ROLE_GERENTE_ACCESS")
-                        /*.requestMatchers(
-                                "/contratos/all",
-                                "/clientes/all",
-                                "/categoria/all",
-                                "/contratos/status"
-
-                        ).hasAnyAuthority("ROLE_GERENTE_ACCESS")*/
+                        ).hasAnyAuthority("ROLE_ADMIN_ACCESS"/*,"ROLE_GERENTE_ACCESS"*/)
                         .anyRequest().authenticated()
 
                 )
